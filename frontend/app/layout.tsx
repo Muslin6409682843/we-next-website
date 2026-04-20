@@ -1,12 +1,25 @@
 // /app/layout.tsx
-import Navbar from "./components/Navbar";
+import "./globals.css";
+import { Noto_Sans_Thai } from "next/font/google";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+
+const noto = Noto_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["400", "500", "600"],
+});
 
 export default function RootLayout({ children }: any) {
   return (
-    <html>
-      <body>
+    <html lang="th">
+       <body className={noto.className}>
         <Navbar />
-        {children}
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <Footer />
       </body>
     </html>
   );

@@ -1,11 +1,17 @@
 // /app/page.tsx
-import Navbar from "./components/Navbar";
+import Hero from "./components/layout/Hero/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <h1>Welcome to my website</h1>
-    </div>
+    <main>
+      <Hero
+        size="large"
+        variant="right-button"
+        type="video"
+        src="/videos/heroTrim.mp4"
+        title={`ให้คำปรึกษาการลด
+การปล่อยก๊าซเรือนกระจกสำหรับ SME`}
+      />
+    </main>
   );
 }

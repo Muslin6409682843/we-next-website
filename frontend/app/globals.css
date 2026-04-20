@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.text-shadow-hero {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+html {
+  overflow-y: scroll;
+}
