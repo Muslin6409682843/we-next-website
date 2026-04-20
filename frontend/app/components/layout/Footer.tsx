@@ -1,4 +1,4 @@
-import { Phone, Clock } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -26,19 +26,23 @@ export default function Footer() {
         </div>
 
         {/* 🔹 RIGHT */}
-        <div className="grid grid-rows-[auto_auto_auto_auto] pt-[110px]">
-          <div></div> {/* เว้นช่องให้ตรง logo */}
+        <div className="relative grid grid-rows-[auto_auto_auto_auto] pt-[110px]">
+          {/* spacer ให้ตรงกับ logo */}
+          <div></div>
+
+          {/* title */}
           <p className="text-[24px] font-semibold mb-4">ติดต่อเรา</p>
-          <div className="flex items-start gap-3 text-[24px] leading-snug">
-            <Phone className="w-[24px] h-[24px] text-white fill-white mt-[2px]" />
+
+          {/* phone */}
+          <div className="flex items-start gap-3 text-[24px] leading-[36px]">
+            <Phone className="w-[24px] h-[24px] fill-white stroke-none mt-[2px]" />
             <span>065-419-9000</span>
           </div>
+
+          {/* time */}
           <div className="flex items-start gap-3 text-[24px] leading-[36px]">
             <svg className="w-[24px] h-[24px] mt-[4px]" viewBox="0 0 24 24">
-              {/* หน้าปัดทึบ */}
               <circle cx="12" cy="12" r="10" fill="white" />
-
-              {/* เข็มโปร่ง (ใช้สีพื้นหลังแทน) */}
               <line
                 x1="12"
                 y1="12"
@@ -57,6 +61,25 @@ export default function Footer() {
               />
             </svg>
             <span>จันทร์ – ศุกร์ (เวลา 09.00 – 17.00 น.)</span>
+          </div>
+
+          {/* 🔥 SOCIAL (ลอย ไม่กระทบ layout) */}
+          <div className="absolute right-0 bottom-0 flex gap-3">
+            <img
+              src="/icons/facebook.png"
+              alt="facebook"
+              className="w-[47px] h-[47px] cursor-pointer hover:opacity-70 transition"
+            />
+            <img
+              src="/icons/linkedin.png"
+              alt="linkedin"
+              className="w-[47px] h-[47px] cursor-pointer hover:opacity-70 transition"
+            />
+            <img
+              src="/icons/line.png"
+              alt="line"
+              className="w-[47px] h-[47px] cursor-pointer hover:opacity-70 transition"
+            />
           </div>
         </div>
       </div>
