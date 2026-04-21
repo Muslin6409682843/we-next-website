@@ -15,9 +15,9 @@ export default function RootLayout({ children }: any) {
        <body className={noto.className}>
         <Navbar />
 
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1 pt-[138px]">
+  {children}
+</main>
 
         <Footer />
       </body>

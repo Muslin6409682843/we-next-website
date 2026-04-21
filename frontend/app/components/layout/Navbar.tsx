@@ -25,7 +25,7 @@ export default function Navbar() {
         w-full h-[138px]
         flex items-center
         px-[210px]
-        relative
+        fixed top-0 left-0 z-50
         bg-white
       "
     >

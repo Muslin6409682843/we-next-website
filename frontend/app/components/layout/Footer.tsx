@@ -64,21 +64,21 @@ export default function Footer() {
           </div>
 
           {/* 🔥 SOCIAL (ลอย ไม่กระทบ layout) */}
-          <div className="absolute right-0 bottom-0 flex gap-3">
+          <div className="absolute right-0 bottom-0 flex gap-5">
             <img
-              src="/icons/facebook.png"
+              src="/icons/facebook2.png"
               alt="facebook"
-              className="w-[47px] h-[47px] cursor-pointer hover:opacity-70 transition"
+              className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
             />
             <img
-              src="/icons/linkedin.png"
+              src="/icons/linkedin2.png"
               alt="linkedin"
-              className="w-[47px] h-[47px] cursor-pointer hover:opacity-70 transition"
+              className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
             />
             <img
               src="/icons/line.png"
               alt="line"
-              className="w-[47px] h-[47px] cursor-pointer hover:opacity-70 transition"
+              className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
             />
           </div>
         </div>
