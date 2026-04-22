@@ -7,6 +7,8 @@ import LeadershipVision from "../components/sections/about/LeadershipVision";
 import OurTeam from "../components/sections/about/OurTeam";
 import OurTagline from "../components/sections/about/OurTagline";
 
+import FadeInSection from "../components/ui/FadeInSection";
+
 export default function AboutPage() {
   return (
     <main className="space-y-[140px] md:space-y-[180px]">
@@ -20,13 +22,22 @@ export default function AboutPage() {
 เข้าสู่สังคมคาร์บอนต่ำ`}
       />
 
-      {/* 🔽 SECTIONS */}
-      <CoreBeliefs />
+      <FadeInSection>
+        <CoreBeliefs />
+      </FadeInSection>
+
       <VisionMission />
-      <LeadershipVision />
+
+      <FadeInSection delay={0.2}>
+        <LeadershipVision />
+      </FadeInSection>
+
       <OurTeam />
+
       <div className="-mt-[140px]">
-        <OurTagline />
+        <FadeInSection delay={0.4}>
+          <OurTagline />
+        </FadeInSection>
       </div>
     </main>
   );

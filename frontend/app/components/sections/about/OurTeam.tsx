@@ -48,7 +48,7 @@ export default function OurTeam() {
     
     {/* 🔹 LOGO */}
     <img
-      src="/images/logo-team.png" // 👈 เปลี่ยนเป็น path ของคุณ
+      src="/images/logo-team.png" 
       alt="ทีมงาน"
       className="w-[57px] h-[60px] object-contain"
     />
