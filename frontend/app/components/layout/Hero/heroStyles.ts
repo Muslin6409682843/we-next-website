@@ -1,7 +1,7 @@
 // /Hero/heroStyles.ts
 export const heroConfig = {
   large: {
-    height: "h-[657px]",
+    height: "h-[500px] md:h-[657px]",
   },
   largeTall: {
     height: "h-[685px]",
