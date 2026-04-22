@@ -1,7 +1,7 @@
 import Hero from "../components/layout/Hero/Hero";
 
 // 🔽 import sections
-import CoreBeliefs from "../components/sections/about/CoreBeliefs"
+import CoreBeliefs from "../components/sections/about/CoreBeliefs";
 import VisionMission from "../components/sections/about/VisionMission";
 import LeadershipVision from "../components/sections/about/LeadershipVision";
 import OurTeam from "../components/sections/about/OurTeam";
@@ -25,7 +25,9 @@ export default function AboutPage() {
       <VisionMission />
       <LeadershipVision />
       <OurTeam />
-      <OurTagline />
+      <div className="-mt-[140px]">
+        <OurTagline />
+      </div>
     </main>
   );
 }
