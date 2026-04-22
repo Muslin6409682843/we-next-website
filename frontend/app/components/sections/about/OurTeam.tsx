@@ -1,20 +1,107 @@
-export default function OurTeam() {
-  return (
-    <section className="py-[100px] flex justify-center bg-[#F5F5F5]">
-      <div className="max-w-[1200px] w-full px-6 text-center">
-        <h2 className="text-[48px] font-semibold text-[#036556] mb-[40px]">
-          ทีมงานของเรา
-        </h2>
+import { Users } from "lucide-react";
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[30px]">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-full h-[150px] bg-gray-200 mb-4 rounded-md" />
-              <p className="text-[#036556] font-medium">ชื่อพนักงาน</p>
-              <p className="text-[#6A6388] text-sm">ตำแหน่ง</p>
+const team = [
+  {
+    name: "คุณท็อป — วีระศักดิ์",
+    role: "| ผู้เชี่ยวชาญด้านนโยบายและ Climate Finance",
+    image: "/images/team-top.png",
+    content: `คุณท็อปกำลังศึกษาระดับปริญญาเอก สาขาเทคโนโลยีพลังงานและวัสดุเพื่อความเป็นกลางทางคาร์บอน ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โดยงานวิจัยของเขาเน้นการวิเคราะห์ผลกระทบของนโยบายลดการปล่อยก๊าซเรือนกระจกต่อการลงทุน การจ้างงาน และการเติบโตทางเศรษฐกิจของประเทศไทย
+
+คุณท็อปสำเร็จการศึกษาปริญญาตรีด้านคณิตศาสตร์ (สจล.) และปริญญาโทด้านการเงิน (มหาวิทยาลัยธรรมศาสตร์) พร้อมประสบการณ์กว่า 20 ปีในฐานะผู้บริหารด้านการลงทุนในธุรกิจหลักทรัพย์ จุดเปลี่ยนสำคัญในชีวิตเกิดขึ้นเมื่อเขาได้เข้าร่วมอบรมด้าน Carbon Credit ของตลาดหลักทรัพย์ฯ ซึ่งจุดประกายให้เขาตัดสินใจนำความรู้และประสบการณ์ทั้งหมดมาอุทิศให้กับการแก้ปัญหาโลกร้อนอย่างเต็มตัว
+
+คุณท็อปได้รับประกาศนียบัตรผู้จัดทำและผู้ทวนสอบจากองค์การบริหารจัดการก๊าซเรือนกระจก (อบก.) ครอบคลุม CFO, CFP, T-VER ป่าไม้ และ T-VER พลังงานและขนส่ง และด้วยพื้นฐานการเป็นอาจารย์สอนคณิตศาสตร์ เขาจึงมีความสามารถพิเศษในการถ่ายทอดเรื่องซับซ้อนให้เข้าใจง่าย`,
+  },
+  {
+    name: "คุณส้ม — สุพจนี",
+    role: "| ผู้เชี่ยวชาญด้านคาร์บอนฟุตพริ้นท์ อุตสาหกรรมสิ่งทอและเครื่องประดับ",
+    image: "/images/team-som.png",
+    content: `คุณส้มสำเร็จการศึกษาด้านสถิติและคณิตศาสตร์ประกันภัย และเคยทำงานในบริษัทประกันภัยข้ามชาติขนาดใหญ่ ก่อนจะเข้าสู่วงการธุรกิจสิ่งทอ และต่อมาได้รับมอบหมายให้ดูแลมาตรฐาน RJC (Responsible Jewelry Council) ให้กับบริษัทผู้ผลิตอัญมณีหลายราย
+
+เมื่อมาตรฐาน RJC เริ่มบูรณาการเรื่องการลดคาร์บอนเข้ามา คุณส้มจึงศึกษาเรื่องนี้อย่างเป็นระบบผ่านหลักสูตรเฉพาะทางของจุฬาลงกรณ์มหาวิทยาลัย จนมีความเชี่ยวชาญสูงในการจัดทำคาร์บอนฟุตพริ้นท์สำหรับอุตสาหกรรมสิ่งทอและเครื่องประดับ โดยมีประกาศนียบัตรด้านความยั่งยืนเสริมความแข็งแกร่งให้กับความเชี่ยวชาญนั้น`,
+  },
+  {
+    name: "คุณอาร์ม — ธารณ",
+    role: "| ผู้เชี่ยวชาญด้านอุตสาหกรรมการท่องเที่ยวและโรงแรม",
+    image: "/images/team-arm.png",
+    content: `คุณอาร์มเริ่มต้นอาชีพในฐานะวิศวกรโทรคมนาคมที่ CAT ก่อนจะขยายประสบการณ์สู่ธุรกิจที่หลากหลาย ทั้งร้านอาหาร บาร์ อีคอมเมิร์ซ งานการตลาดและออร์แกไนเซอร์ระดับองค์กร จนถึงธุรกิจสปาส่วนตัว และเติบโตสู่ระดับผู้บริหารฟิตเนสและสปาของโรงแรมชั้นนำหลายแห่ง รวมถึงสปาระดับ 6 ดาว
+
+ประสบการณ์ที่สั่งสมมาทำให้เขาเห็นว่าพฤติกรรมการใช้ทรัพยากรอย่างสิ้นเปลืองในองค์กร ไม่ว่าจะเป็นการเปิดแอร์หรือไฟทิ้งไว้ ล้วนส่งผลโดยตรงต่อการปล่อยก๊าซเรือนกระจก สิ่งนี้เป็นแรงบันดาลใจให้เขาหันมาศึกษาเรื่องนี้อย่างจริงจัง และปัจจุบันถือประกาศนียบัตรด้าน CFO และ T-VER ป่าไม้ จาก อบก.`,
+  },
+];
+
+export default function OurTeam() {
+  const renderRole = (role = "") => {
+    const text = role.replace("|", "").trim();
+
+    return (
+      <p className="text-[32px] font-semibold mb-[20px]">
+        <span className="text-[#036556]">| </span>
+        <span className="text-[#73F68D]">{text}</span>
+      </p>
+    );
+  };
+
+  return (
+    <section className="w-full bg-[#DFF7EF]">
+      <div className="w-full pt-[80px] pb-[20px] pl-[158px]">
+  <div className="flex items-center gap-[16px]">
+    
+    {/* 🔹 LOGO */}
+    <img
+      src="/images/logo-team.png" // 👈 เปลี่ยนเป็น path ของคุณ
+      alt="ทีมงาน"
+      className="w-[57px] h-[60px] object-contain"
+    />
+
+    {/* 🔹 TITLE */}
+    <h2 className="text-[44px] font-semibold text-[#036556] leading-tight">
+      ทีมงานของเรา
+    </h2>
+  </div>
+</div>
+
+      {/* CARDS */}
+      <div className="flex flex-col">
+        {team.map((member, index) => {
+          const isGreen = index % 2 === 0;
+
+          return (
+            <div
+              key={index}
+              className={`w-full py-[80px] ${
+                isGreen ? "bg-[#DFF7EF]" : "bg-white"
+              }`}
+            >
+              <div
+                className={`flex gap-[60px] w-full items-center ${
+                  isGreen ? "pl-[158px] pr-[158px]" : "pl-[158px] pr-[100px]"
+                } ${!isGreen ? "flex-row-reverse" : "flex-row"}`}
+              >
+                {/* IMAGE */}
+                <div className="w-[400px] h-[400px] flex-shrink-0">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover rounded-[16px]"
+                  />
+                </div>
+
+                {/* TEXT */}
+                <div className="flex-1 max-w-[1100px]">
+                  <h3 className="text-[32px] font-semibold text-[#036556] mb-[8px]">
+                    {member.name}
+                  </h3>
+
+                  {renderRole(member.role)}
+
+                  <p className="w-full text-[24px] leading-[36px] font-medium text-[#036556] whitespace-pre-line">
+                    {member.content}
+                  </p>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
