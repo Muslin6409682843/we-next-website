@@ -55,7 +55,7 @@ export default function Home() {
               title="Carbon Credit T-VER ป่าไม้"
               description="ป่าที่ท่านดูแลอยู่สามารถแปลงเป็นรายได้ได้จริง เราช่วยดูแลเอกสารและขึ้นทะเบียนกับ อบก. ให้ครบถ้วน"
               highlight="พื้นที่สีเขียวของท่าน มีมูลค่ามากกว่าที่คิด"
-              href="/services/3"
+              href="/services/tver-forestry"
               icon="tree"
             />
 
@@ -63,7 +63,7 @@ export default function Home() {
               title="Carbon Credit T-VER พลังงานและขนส่ง"
               description="โครงการพลังงานสะอาดของท่านอาจสร้างมูลค่าได้มากกว่าแค่ค่าไฟที่ประหยัดได้ เราช่วยตรวจสอบและยื่นขอ Carbon Credit ให้คุ้มค่าทุกบาทที่ลงทุนไป"
               highlight="ลงทุน Solar หรือเปลี่ยน EV แล้ว — ทำไมไม่ได้เครดิตด้วย?"
-              href="/services/4"
+              href="/services/tver-energy-transport"
               icon="energy"
             />
           </div>
@@ -74,7 +74,7 @@ export default function Home() {
               title="อบรมและสัมมนาภายในองค์กร"
               description="ออกแบบหลักสูตรให้ตรงกับองค์กรของท่าน ไม่ต้องมีพื้นฐานมาก่อน — ทีมงานของท่านจะเข้าใจเรื่องคาร์บอนและลงมือทำได้จริงหลังจบการอบรม"
               highlight="เรื่องซับซ้อน เราทำให้เข้าใจง่าย"
-              href="/services/5"
+              href="/services/training"
               icon="presentation"
             />
           </div>

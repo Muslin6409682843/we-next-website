@@ -18,7 +18,15 @@ export default function ServicesPage() {
 
       <ServicesIntro />
       <CarbonReductionExamples />
+
+      {/* 🟡 เพิ่มช่องว่าง */}
+      <div className="h-[300px]" />
+
       <OurServices />
+
+      {/* 🟡 เพิ่มช่องว่าง */}
+      <div className="h-[300px]" />
+      
       <CallToAction />
      
 
