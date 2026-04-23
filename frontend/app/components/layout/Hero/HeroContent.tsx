@@ -11,7 +11,7 @@ export default function HeroContent({ size, variant, title, subtitle }: Props) {
   if (size === "small") {
     return (
       <div className="w-full text-center">
-        <h1 className="text-white text-[48px] font-semibold drop-shadow-lg">
+        <h1 className="text-white text-[48px] font-semibold text-shadow-hero">
           {title}
         </h1>
       </div>
