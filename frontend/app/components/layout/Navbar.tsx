@@ -77,7 +77,7 @@ export default function Navbar() {
       </div>
 
       {/* 🔹 RIGHT: LANGUAGE */}
-      <div className="flex-1 flex justify-end items-center gap-4 text-[24px] font-medium">
+      <div className="flex-1 flex justify-end items-center gap-2 text-[22px] font-medium">
         {/* 🌐 ICON (Lucide) */}
         <Globe className="w-[28px] h-[28px] text-[#036556] -mt-[2px]" />
 
@@ -102,7 +102,7 @@ export default function Navbar() {
       ${lang === "EN" ? "text-[#73F68D]" : "text-[#036556] hover:opacity-70"}
     `}
         >
-          EN
+        EN
         </span>
       </div>
     </nav>
