@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section className="relative w-full h-[674px] bg-[rgba(109,237,195,0.18)]">
       {/* 🟩 Background block (Rectangle 327) */}
-      <div className="absolute left-[4px] top-0 w-[1922px] h-[674px]" />
+      <div className="absolute w-full h-full" />
 
       {/* 💬 Main text */}
       <div className="absolute left-1/2 top-[220px] -translate-x-[60%] w-[1316px] text-left">
