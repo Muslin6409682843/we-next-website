@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CallToAction() {
   return (
     <section className="py-[120px] bg-white">
-      <div className="max-w-[1200px] w-full pl-[210px]">
+      <div className="max-w-[1200px] w-full pl-[200px]">
         {/* 🔹 TITLE */}
         <h2 className="text-[#036556] text-[48px] font-bold leading-[65px] mb-4">
           ไม่แน่ใจว่าบริการไหนเหมาะกับองค์กรของท่าน?

@@ -1,6 +1,6 @@
 export default function ServicesIntro() {
   return (
-    <section className="py-[100px] bg-white flex justify-center">
+    <section className="pt-[100px] pb-[20px] bg-white flex justify-center">
       <div className="w-[1223px] flex items-center justify-between gap-[80px]">
         {/* 🟡 IMAGE LEFT */}
         <div className="w-[426px] h-[426px] flex-shrink-0">

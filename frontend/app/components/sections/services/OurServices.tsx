@@ -2,20 +2,26 @@ import ServiceCardOurServices from "../../cards/ServiceCardOurServices";
 
 export default function OurServices() {
   return (
-    <section className="relative overflow-x-hidden">
-      {/* 🟩 Gradient */}
-      <div className="absolute inset-0 h-[364px] bg-gradient-to-r from-[#A1FFCE] to-[#FAFFD1]" />
+    <section className="relative overflow-x-hidden -mt-[30px]">
+      <div className="w-full py-[120px] flex flex-col items-center text-center">
+  
+  {/* small label */}
+  <p className="text-[#F04F23] text-[16px] tracking-[0.2em] mb-4">
+    OUR SERVICES
+  </p>
 
-      {/* 🟦 Title */}
-      <div className="relative w-full h-[364px] flex items-center justify-center">
-        <h2 className="text-[#126656] font-semibold text-[64px] leading-[97px] text-center">
-          บริการทั้งหมดของเรา
-        </h2>
-      </div>
+  {/* main title */}
+  <h2 className="text-[#126656] font-semibold text-[48px] leading-[70px]">
+    บริการทั้งหมดของเรา
+  </h2>
+
+  {/* subtle divider */}
+  <div className="w-[60px] h-[2px] bg-[#126656]/20 mt-6" />
+</div>
 
       {/* 🔥 Container */}
       <div className="w-full max-w-[1800px] mx-auto px-[20px]">
-        <div className="h-[120px]" />
+        
 
         {/* CFO */}
         <div className="flex justify-start">
@@ -31,7 +37,7 @@ export default function OurServices() {
           />
         </div>
 
-        <div className="h-[120px]" />
+        <div className="h-[50px]" />
 
         {/* CFP */}
         <div className="flex justify-start">
@@ -46,7 +52,7 @@ export default function OurServices() {
           />
         </div>
 
-        <div className="h-[120px]" />
+        <div className="h-[50px]" />
 
         {/* T-VER Forestry */}
         <div className="flex justify-end">
@@ -64,7 +70,7 @@ export default function OurServices() {
           />
         </div>
 
-        <div className="h-[120px]" />
+        <div className="h-[50px]" />
 
         {/* T-VER Energy */}
         <div className="flex justify-end">
@@ -79,7 +85,7 @@ export default function OurServices() {
           />
         </div>
 
-        <div className="h-[120px]" />
+        <div className="h-[50px]" />
 
         {/* Training */}
         <div className="flex justify-start">
@@ -97,8 +103,6 @@ export default function OurServices() {
             outcomeIcon="book"
           />
         </div>
-
-        <div className="h-[120px]" />
       </div>
     </section>
   );

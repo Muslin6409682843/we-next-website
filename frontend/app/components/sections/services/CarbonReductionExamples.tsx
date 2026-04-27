@@ -2,7 +2,7 @@ export default function CarbonReductionExamples() {
   return (
     <section className="relative overflow-hidden overflow-x-hidden h-[800px]">
       {/* 🟩 BACKGROUND */}
-      <div className="absolute w-[1107px] h-[800px] bg-[rgba(109,237,195,0.18)] left-0 top-0" />
+      <div className="absolute w-[1107px] h-[650px] bg-[rgba(109,237,195,0.18)] left-0 top-1/2 -translate-y-1/2" />
 
       {/* 🟦 ROOT */}
       <div className="relative w-full h-full px-[100px] flex items-center justify-start">
@@ -43,25 +43,26 @@ export default function CarbonReductionExamples() {
           </div>
 
           {/* 🟡 IMAGE */}
-          <div className="relative w-[420px] h-[800px] overflow-hidden">
-            {/* รูป 1 (ล่างสุด) */}
-            <img
-              src="/images/servicesExample-1.jpg"
-              className="absolute w-[284px] h-[290px] left-[80px] top-[150px] rounded-[30px_0_30px_0] object-cover z-0"
-            />
+          {/* 🟡 IMAGE */}
+<div className="relative w-[420px] h-[650px]">
+  {/* รูป 1 */}
+  <img
+    src="/images/servicesExample-1.jpg"
+    className="absolute top-0 left-[90px] w-[260px] h-[280px] rounded-[30px_0_30px_0] object-cover translate-y-[51px] z-10"
+  />
 
-            {/* รูป 2 (กลาง) 👉 แก้ตรงนี้ */}
-            <img
-              src="/images/servicesExample-2.jpg"
-              className="absolute w-[293px] h-[312px] right-0 top-[230px] rounded-[30px_0_30px_0] object-cover z-10"
-            />
+  {/* รูป 2 */}
+  <img
+    src="/images/servicesExample-2.jpg"
+    className="absolute top-0 left-[360px] w-[280px] h-[300px] rounded-[30px_0_30px_0] object-cover translate-y-[100px] z-30"
+  />
 
-            {/* รูป 3 (บนสุด) */}
-            <img
-              src="/images/servicesExample-3.jpg"
-              className="absolute w-[392px] h-[243px] left-[25px] top-[480px] rounded-[30px_0_30px_0] object-cover z-20"
-            />
-          </div>
+  {/* รูป 3 */}
+  <img
+    src="/images/servicesExample-3.jpg"
+    className="absolute top-0 left-[40px] w-[350px] h-[240px] rounded-[30px_0_30px_0] object-cover translate-y-[340px] z-20"
+  />
+</div>
         </div>
       </div>
     </section>

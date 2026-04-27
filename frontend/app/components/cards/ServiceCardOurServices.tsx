@@ -8,6 +8,7 @@ import {
   Zap,
   BookOpen,
   Presentation,
+  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -47,7 +48,7 @@ export default function ServiceCardOurServices({
 
   return (
     <Link href={href} className="block w-full max-w-[1500px]">
-      <div className="w-full box-border bg-[rgba(109,237,195,0.18)] rounded-tl-[30px] rounded-br-[30px] p-[60px] hover:-translate-y-2 transition">
+      <div className="w-full box-border bg-[rgba(109,237,195,0.18)] rounded-tl-[30px] rounded-br-[30px] px-[60px] py-[40px] min-h-[480px] flex flex-col justify-center hover:-translate-y-2 transition">
         <div className="px-[60px]">
           {/* HEADER */}
           <div className="flex items-center gap-5 mb-6">
@@ -97,9 +98,13 @@ export default function ServiceCardOurServices({
         </div>
 
         {/* CTA */}
-        <div className="flex justify-end mt-6">
-          <div className="w-[100px] h-[50px] bg-[#73F68D] rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center">
-            →
+        <div className="flex justify-end mt-[20px]">
+          <div className="w-[80px] h-[40px] bg-[#73F68D] rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center group">
+            <ArrowRight
+              size={25}
+              strokeWidth={2}
+              className="text-[#036556] transition-transform duration-200 group-hover:translate-x-1"
+            />
           </div>
         </div>
       </div>
