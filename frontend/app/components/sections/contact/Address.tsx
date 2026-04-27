@@ -33,7 +33,7 @@ export default function Address() {
         {/* 📍 Address text (right side) */}
         <div className="absolute right-[70px] top-[70px] w-[578px] text-right">
           <p className="text-[24px] font-medium leading-[36px] text-[#036556]">
-            807-809 อาคารสีลมเซี่ยงไฮ้ ชั้นที่ 6 ห้องที่ 2 ซอย สีลม 17 ถนนสีลม
+            807-809 อาคารสีลมเซี่ยงไฮ้ ชั้นที่ 6 ห้องที่ 2 ซอยสีลม 17 ถนนสีลม
             แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500
           </p>
         </div>

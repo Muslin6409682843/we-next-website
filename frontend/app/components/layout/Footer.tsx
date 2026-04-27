@@ -80,6 +80,11 @@ export default function Footer() {
               alt="line"
               className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
             />
+            <img
+              src="/icons/whatsapp.png"
+              alt="whatsapp"
+              className="w-[43px] h-[43px] cursor-pointer hover:opacity-70 transition translate-y-[-4px]"
+            />
           </div>
         </div>
       </div>
