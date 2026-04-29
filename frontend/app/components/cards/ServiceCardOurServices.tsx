@@ -48,7 +48,7 @@ export default function ServiceCardOurServices({
 
   return (
     <Link href={href} className="block w-full max-w-[1500px]">
-      <div className="w-full box-border bg-[rgba(109,237,195,0.18)] rounded-tl-[30px] rounded-br-[30px] px-[60px] py-[40px] min-h-[480px] flex flex-col justify-center hover:-translate-y-2 transition">
+      <div className="w-full box-border bg-[rgba(109,237,195,0.18)] rounded-tl-[30px] rounded-br-[30px] px-[60px] py-[40px] min-h-[480px] flex flex-col justify-center hover:-translate-y-2 transition group">
         <div className="px-[60px]">
           {/* HEADER */}
           <div className="flex items-center gap-5 mb-6">
@@ -56,7 +56,7 @@ export default function ServiceCardOurServices({
               <Icon size={50} className="text-[#73F68D]" />
             </div>
 
-            <h3 className="text-[#036556] text-[34px] font-semibold">
+            <h3 className="text-[#036556] text-[34px] font-semibold underline-offset-4 decoration-2 decoration-[#036556] group-hover:underline">
               {title}
             </h3>
           </div>
