@@ -1,40 +1,31 @@
 export default function CTA() {
   return (
-    <section className="relative w-full h-[674px] bg-[rgba(109,237,195,0.18)]">
-      {/* 🟩 Background block (Rectangle 327) */}
-      <div className="absolute w-full h-full" />
+    <section className="w-full h-[674px] flex items-center justify-center bg-gradient-to-br from-[#E6FFF6] via-[#F7FFFC] to-[#E9FFF8] relative overflow-hidden">
+      {/* 🌟 subtle glow */}
+      <div className="absolute w-[500px] h-[500px] bg-[#6DEDC3] opacity-20 blur-[120px] top-[-100px] left-[10%]" />
 
-      {/* 💬 Main text */}
-      <div className="absolute left-1/2 top-[220px] -translate-x-[60%] w-[1316px] text-left">
-        <h2 className="text-[48px] font-semibold leading-[73px] text-[#20443B]">
-          “แวะมาพูดคุยกับเราได้เสมอ —<br />
-          เราพร้อมช่วยให้องค์กรของท่านเริ่มต้น
-          <br />
-          การเดินทางสู่ความยั่งยืนอย่างมั่นใจ”
-        </h2>
-      </div>
-
-      {/* 📱 QR Group */}
-      <div className="absolute right-[120px] top-[140px] flex flex-col items-center gap-[20px]">
-        {/* QR Images */}
-        <div className="flex gap-[30px]">
-          <img
-            src="/images/image52.png"
-            alt="line qr"
-            className="w-[227px] h-[227px] object-cover"
-          />
-
-          <img
-            src="/images/image53.png"
-            alt="facebook qr"
-            className="w-[224px] h-[224px] object-cover"
-          />
+      <div className="w-full max-w-[1200px] flex items-center justify-between px-[40px] relative z-10">
+        {/* 💬 LEFT TEXT */}
+        <div className="max-w-[750px] text-center">
+          <h2 className="text-[48px] font-semibold leading-[72px] text-[#036556] tracking-[-0.5px]">
+            “แวะมาพูดคุยกับเราได้เสมอ —
+            <br />
+            เราพร้อมช่วยให้องค์กรของท่านเริ่มต้น
+            <br />
+            การเดินทางสู่ความยั่งยืนอย่างมั่นใจ”
+          </h2>
         </div>
 
-        {/* Text */}
-        <p className="w-[468px] text-[24px] font-medium text-[#20443B] text-center leading-[36px]">
-          Scan Qr Code Line และ Facebook ได้ที่นี่ !
-        </p>
+        {/* 📱 RIGHT QR (no hover / no animation) */}
+        <div className="flex-shrink-0">
+          <div className="bg-white p-[16px] rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+            <img
+              src="/images/line-qr.jpg"
+              alt="line qr"
+              className="w-[227px] h-[227px] object-cover rounded-[12px]"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ export default function Location() {
   return (
     <section className="relative pb-[600px] bg-white">
       {/* 🔥 centered wrapper */}
-      <div className="absolute left-1/2 top-[-250px] -translate-x-[46%] w-[1531px]">
+      <div className="absolute left-1/2 top-[-300px] -translate-x-[46%] w-[1531px]">
         {/* 🔸 รูปซ้าย */}
         <img
           src="/images/location-1.jpg"

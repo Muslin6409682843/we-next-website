@@ -1,19 +1,15 @@
-import { Phone } from "lucide-react";
-
 export default function Contact() {
   return (
     <section className="relative h-[1200px] bg-white">
-      
       {/* 🔥 รวมทั้งหมดเป็น block เดียว */}
       <div className="absolute left-[698px] top-[150px] flex flex-col gap-[120px]">
-        
         {/* 🔸 โทรศัพท์ */}
         <div className="flex items-center gap-12">
           <div className="w-[105px] h-[105px] bg-[#73F68D] rounded-full flex items-center justify-center">
-            <Phone
-              className="w-[52px] h-[52px] text-white"
-              strokeWidth={2}
-              fill="white"
+            <img
+              src="/icons/phone.png"
+              alt="phone icon"
+              className="w-[52px] h-[52px] object-contain"
             />
           </div>
 
@@ -30,20 +26,11 @@ export default function Contact() {
         {/* 🔸 Email */}
         <div className="flex items-center gap-12">
           <div className="w-[105px] h-[105px] bg-[#73F68D] rounded-full flex items-center justify-center">
-            <svg className="w-[60px] h-[60px]" viewBox="0 0 24 24">
-              
-              {/* 🔸 ซอง */}
-              <rect x="4" y="4" width="16" height="16" rx="2" fill="white" />
-
-              {/* 🔸 flap */}
-              <polyline
-                points="4,4 12,13 20,4"
-                fill="none"
-                stroke="#73F68D"
-                strokeWidth="2.5"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <img
+              src="/icons/mail.png"
+              alt="mail icon"
+              className="w-[52px] h-[52px] object-contain"
+            />
           </div>
 
           <div>
@@ -59,25 +46,11 @@ export default function Contact() {
         {/* 🔸 เวลาทำการ */}
         <div className="flex items-center gap-12">
           <div className="w-[105px] h-[105px] bg-[#73F68D] rounded-full flex items-center justify-center">
-            <svg className="w-[60px] h-[60px]" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" fill="white" />
-              <line
-                x1="12"
-                y1="12"
-                x2="12"
-                y2="7"
-                stroke="#73F68D"
-                strokeWidth="2"
-              />
-              <line
-                x1="12"
-                y1="12"
-                x2="16"
-                y2="12"
-                stroke="#73F68D"
-                strokeWidth="2"
-              />
-            </svg>
+            <img
+              src="/icons/clock.png"
+              alt="clock icon"
+              className="w-[52px] h-[52px] object-contain"
+            />
           </div>
 
           <div>
@@ -90,7 +63,6 @@ export default function Contact() {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );
