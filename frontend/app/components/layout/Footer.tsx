@@ -65,21 +65,41 @@ export default function Footer() {
 
           {/* 🔥 SOCIAL (ลอย ไม่กระทบ layout) */}
           <div className="absolute right-0 bottom-0 flex gap-5">
-            <img
-              src="/icons/facebook2.png"
-              alt="facebook"
-              className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
-            />
-            <img
-              src="/icons/linkedin2.png"
-              alt="linkedin"
-              className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
-            />
-            <img
-              src="/icons/line.png"
-              alt="line"
-              className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
-            />
+            <a
+              href="https://web.facebook.com/WeNext.consult"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/icons/facebook2.png"
+                alt="facebook"
+                className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/wenextthailand/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/icons/linkedin2.png"
+                alt="linkedin"
+                className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
+              />
+            </a>
+
+            <a
+              href="https://lin.ee/tjdYGHF"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/icons/line.png"
+                alt="line"
+                className="w-[38px] h-[38px] cursor-pointer hover:opacity-70 transition"
+              />
+            </a>
             <img
               src="/icons/whatsapp.png"
               alt="whatsapp"
