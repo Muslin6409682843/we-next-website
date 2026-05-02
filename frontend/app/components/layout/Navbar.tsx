@@ -78,7 +78,6 @@ export default function Navbar() {
 
       {/* 🔹 RIGHT: LANGUAGE */}
       <div className="flex-1 flex justify-end items-center gap-2 text-[22px] font-medium">
-        {/* 🌐 ICON (Lucide) */}
         <Globe className="w-[28px] h-[28px] text-[#036556] -mt-[2px]" />
 
         {/* TH */}
@@ -92,18 +91,20 @@ export default function Navbar() {
           TH
         </span>
 
-        <span className="text-[#036556]">/</span>
+        {/* ซ่อน EN ชั่วคราว */}
+        {/*
+  <span className="text-[#036556]">/</span>
 
-        {/* EN */}
-        <span
-          onClick={() => setLang("EN")}
-          className={`
+  <span
+    onClick={() => setLang("EN")}
+    className={`
       cursor-pointer transition-all duration-300
       ${lang === "EN" ? "text-[#73F68D]" : "text-[#036556] hover:opacity-70"}
     `}
-        >
-        EN
-        </span>
+  >
+    EN
+  </span>
+  */}
       </div>
     </nav>
   );
