@@ -3,6 +3,7 @@ import "./globals.css";
 import { Noto_Sans_Thai } from "next/font/google";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 const noto = Noto_Sans_Thai({
   subsets: ["thai"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: any) {
 </main>
 
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
