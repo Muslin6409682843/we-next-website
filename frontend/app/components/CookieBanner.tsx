@@ -33,9 +33,16 @@ export default function CookieBanner() {
         fixed
         left-1/2
         -translate-x-1/2
-        bottom-[40px]
+        bottom-4
+        sm:bottom-6
+        lg:bottom-10
+
         z-[999]
-        w-[calc(100%-80px)]
+
+        w-[calc(100%-24px)]
+        sm:w-[calc(100%-40px)]
+        lg:w-[calc(100%-80px)]
+
         max-w-[1400px]
 
         backdrop-blur-xl
@@ -43,8 +50,9 @@ export default function CookieBanner() {
         border border-white/30
         shadow-[0_8px_40px_rgba(0,0,0,0.18)]
 
-        px-[40px]
-        py-[32px]
+        px-5 py-5
+        sm:px-7 sm:py-6
+        lg:px-[40px] lg:py-[32px]
       "
       style={{
         borderTopLeftRadius: "30px",
@@ -53,14 +61,52 @@ export default function CookieBanner() {
         borderBottomLeftRadius: "0px",
       }}
     >
-      <div className="flex items-end justify-between gap-10">
+      <div
+        className="
+          flex flex-col
+          lg:flex-row
+          lg:items-end
+          lg:justify-between
+
+          gap-6
+          lg:gap-10
+        "
+      >
         {/* LEFT */}
-        <div className="max-w-[900px] flex flex-col gap-4">
-          <h3 className="text-[28px] font-semibold text-[#036556]">
+        <div
+          className="
+            w-full
+            lg:max-w-[900px]
+
+            flex flex-col gap-3
+            lg:gap-4
+          "
+        >
+          <h3
+            className="
+              font-semibold text-[#036556]
+
+              text-[22px]
+              sm:text-[24px]
+              lg:text-[28px]
+            "
+          >
             Cookie Settings
           </h3>
 
-          <p className="text-[18px] leading-[32px] text-[#20443B]">
+          <p
+            className="
+              text-[#20443B]
+
+              text-[15px]
+              leading-[28px]
+
+              sm:text-[16px]
+
+              lg:text-[18px]
+              lg:leading-[32px]
+            "
+          >
             เว็บไซต์นี้ใช้คุกกี้เพื่อพัฒนาประสบการณ์การใช้งาน
             วิเคราะห์การใช้งานเว็บไซต์
             และช่วยให้บริการของเรามีประสิทธิภาพมากยิ่งขึ้น
@@ -69,13 +115,18 @@ export default function CookieBanner() {
           <Link
             href="/privacy-policy"
             className="
-            w-fit
-            text-[18px]
-            text-[#036556]
-            underline
-            underline-offset-4
-            hover:opacity-70
-            transition
+              w-fit
+
+              text-[#036556]
+              underline
+              underline-offset-4
+
+              hover:opacity-70
+              transition
+
+              text-[15px]
+              sm:text-[16px]
+              lg:text-[18px]
             "
           >
             อ่านรายละเอียดเพิ่มเติม
@@ -83,16 +134,39 @@ export default function CookieBanner() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex gap-4 shrink-0">
+        <div
+          className="
+            flex flex-col
+            sm:flex-row
+
+            gap-3
+            sm:gap-4
+
+            w-full
+            lg:w-auto
+
+            shrink-0
+          "
+        >
           <button
             onClick={acceptCookies}
             className="
               bg-[#036556]
               text-white
-              px-8
+
+              w-full
+              sm:w-auto
+
+              px-6
+              lg:px-8
+
               py-3
-              text-[18px]
+
+              text-[16px]
+              lg:text-[18px]
+
               rounded-[14px]
+
               hover:opacity-90
               transition
             "
@@ -105,10 +179,20 @@ export default function CookieBanner() {
             className="
               border border-[#036556]
               text-[#036556]
-              px-8
+
+              w-full
+              sm:w-auto
+
+              px-6
+              lg:px-8
+
               py-3
-              text-[18px]
+
+              text-[16px]
+              lg:text-[18px]
+
               rounded-[14px]
+
               hover:bg-[#036556]/10
               transition
             "
