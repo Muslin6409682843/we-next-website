@@ -5,6 +5,8 @@ import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
+import ConsultationSection from "../../components/sections/services/details/ConsultationSection";
+import FAQSection from "../../components/sections/services/details/FAQSection";
 
 export default function CFOPage() {
   return (
@@ -136,6 +138,59 @@ export default function CFOPage() {
             title: "ให้คำแนะนำต่อยอด",
             description:
               "หากองค์กรต้องการดำเนินการต่อ เช่น วางเป้าหมายลดคาร์บอน จัดทำแผนลดการปล่อย หรือเตรียมยื่นรับรองกับหน่วยงานที่เกี่ยวข้อง เราสามารถวางแผนต่อยอดร่วมกันได้",
+          },
+        ]}
+      />
+      <SectionDivider />
+
+      <SideAccentSection side="right">
+        <TextSection
+          title="สิ่งที่ท่านจะได้รับ"
+          content={
+            <div className="space-y-10">
+              {/* intro */}
+              <p>ท่านจะได้รับรายงาน</p>
+
+              {/* bullet */}
+              <ul className="list-disc pl-8 space-y-5">
+                <li>
+                  คาร์บอนฟุตพริ้นท์องค์กรฉบับสมบูรณ์
+                  สรุปผลการปล่อยก๊าซเรือนกระจกตามหมวดกิจกรรม{" "}
+                </li>
+
+                <li>
+                  รายการข้อมูลและสมมติฐานที่ใช้ในการคำนวณ executive summary
+                  สำหรับผู้บริหาร
+                </li>
+
+                <li>ข้อเสนอแนะแนวทางลดการปล่อยระยะสั้น ระยะกลาง และระยะยาว</li>
+              </ul>
+            </div>
+          }
+        />
+      </SideAccentSection>
+      <SectionDivider />
+
+      <ConsultationSection />
+      <SectionDivider />
+
+      <FAQSection
+        items={[
+          {
+            question: "CFO คืออะไร",
+            answer:
+              "CFO หรือ Carbon Footprint for Organization คือการประเมินปริมาณการปล่อยก๊าซเรือนกระจกจากกิจกรรมทั้งหมดขององค์กร เพื่อให้ทราบแหล่งกำเนิดและวางแผนลดการปล่อยได้อย่างเหมาะสม",
+          },
+          {
+            question:
+              "ถ้ายังไม่เคยเก็บข้อมูลด้านคาร์บอนมาก่อน สามารถเริ่มได้หรือไม่",
+            answer:
+              "สามารถเริ่มได้ ทีมงานจะช่วยแนะนำรายการข้อมูลที่จำเป็น วิธีรวบรวมข้อมูล และช่วยจัดระบบให้เข้าใจง่ายตั้งแต่ต้น",
+          },
+          {
+            question: "ใช้เวลาทำนานแค่ไหน",
+            answer:
+              "ระยะเวลาขึ้นอยู่กับขนาดองค์กรและความพร้อมของข้อมูล โดยทั่วไปใช้เวลาประมาณ 4–12 สัปดาห์",
           },
         ]}
       />

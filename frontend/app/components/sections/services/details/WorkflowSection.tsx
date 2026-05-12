@@ -84,18 +84,19 @@ export default function WorkflowSection({ steps }: Props) {
         {/* hidden content */}
         <div
           className={`
-            overflow-visible
-            transition-all
-            duration-500
+    grid
+    transition-all
+    duration-500
 
-            ${open ? "max-h-[6000px] opacity-100" : "max-h-0 opacity-0"}
-          `}
+    ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
+  `}
         >
-          {/* timeline */}
-          <div className="relative flex flex-col gap-10 pt-10 pb-10">
-            {/* line */}
-            <div
-              className="
+          <div className="overflow-hidden">
+            {/* timeline */}
+            <div className="relative flex flex-col gap-10 pt-10 pb-10">
+              {/* line */}
+              <div
+                className="
       absolute
       left-[130px]
 
@@ -109,25 +110,25 @@ export default function WorkflowSection({ steps }: Props) {
 
       max-[992px]:hidden
     "
-            />
+              />
 
-            {steps.map((step, index) => {
-              const color = colors[index % colors.length];
-              const isLastStep = index === steps.length - 1;
+              {steps.map((step, index) => {
+                const color = colors[index % colors.length];
+                const isLastStep = index === steps.length - 1;
 
-              return (
-                <div
-                  key={index}
-                  className="
+                return (
+                  <div
+                    key={index}
+                    className="
                     relative
                     flex
                     justify-center
                   "
-                >
-                  {/* arrow */}
-                  {!isLastStep && (
-                    <div
-                      className="
+                  >
+                    {/* arrow */}
+                    {!isLastStep && (
+                      <div
+                        className="
                         absolute
                         top-full
                         left-[109px]
@@ -137,19 +138,19 @@ export default function WorkflowSection({ steps }: Props) {
 
                         max-[992px]:hidden
                       "
-                    >
-                      <div
-                        className="w-0 h-0 border-l-[24px] border-r-[24px] border-t-[40px] border-l-transparent border-r-transparent"
-                        style={{
-                          borderTopColor: color,
-                        }}
-                      />
-                    </div>
-                  )}
+                      >
+                        <div
+                          className="w-0 h-0 border-l-[24px] border-r-[24px] border-t-[40px] border-l-transparent border-r-transparent"
+                          style={{
+                            borderTopColor: color,
+                          }}
+                        />
+                      </div>
+                    )}
 
-                  {/* card */}
-                  <div
-                    className="
+                    {/* card */}
+                    <div
+                      className="
                       relative
                       w-[860px]
                       bg-white
@@ -159,17 +160,17 @@ export default function WorkflowSection({ steps }: Props) {
 
                       max-[992px]:w-full
                     "
-                  >
-                    {/* top line */}
-                    <div
-                      className="w-full h-[25px]"
-                      style={{ backgroundColor: color }}
-                    />
-
-                    <div className="relative p-10 pl-[170px] max-[640px]:pl-[120px]">
-                      {/* step badge */}
+                    >
+                      {/* top line */}
                       <div
-                        className="
+                        className="w-full h-[25px]"
+                        style={{ backgroundColor: color }}
+                      />
+
+                      <div className="relative p-10 pl-[170px] max-[640px]:pl-[120px]">
+                        {/* step badge */}
+                        <div
+                          className="
                           absolute
                           top-1/2
                           -translate-y-1/2
@@ -190,10 +191,10 @@ export default function WorkflowSection({ steps }: Props) {
                           max-[640px]:h-[56px]
                           max-[640px]:-left-[50px]
                         "
-                        style={{ backgroundColor: color }}
-                      >
-                        <span
-                          className="
+                          style={{ backgroundColor: color }}
+                        >
+                          <span
+                            className="
                             text-white
                             font-semibold
                             text-[32px]
@@ -201,14 +202,14 @@ export default function WorkflowSection({ steps }: Props) {
 
                             max-[640px]:text-[24px]
                           "
-                        >
-                          ขั้นตอนที่ {index + 1}
-                        </span>
-                      </div>
+                          >
+                            ขั้นตอนที่ {index + 1}
+                          </span>
+                        </div>
 
-                      {/* title */}
-                      <h3
-                        className="
+                        {/* title */}
+                        <h3
+                          className="
                           text-[#036556]
                           font-semibold
                           text-[24px]
@@ -218,13 +219,13 @@ export default function WorkflowSection({ steps }: Props) {
                           max-[640px]:text-[20px]
                           max-[640px]:leading-[30px]
                         "
-                      >
-                        {step.title}
-                      </h3>
+                        >
+                          {step.title}
+                        </h3>
 
-                      {/* description */}
-                      <p
-                        className="
+                        {/* description */}
+                        <p
+                          className="
                           text-[#036556]
                           font-medium
                           text-[24px]
@@ -233,14 +234,15 @@ export default function WorkflowSection({ steps }: Props) {
                           max-[640px]:text-[16px]
                           max-[640px]:leading-[28px]
                         "
-                      >
-                        {step.description}
-                      </p>
+                        >
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
