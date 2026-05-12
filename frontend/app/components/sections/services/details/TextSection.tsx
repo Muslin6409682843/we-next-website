@@ -1,8 +1,8 @@
-// /components/sections/services/details/TextSection.tsx
+import { ReactNode } from "react";
 
 type Props = {
   title: string;
-  content: string;
+  content: ReactNode;
 };
 
 export default function TextSection({
@@ -44,7 +44,7 @@ export default function TextSection({
         </h2>
 
         {/* content */}
-        <p
+        <div
           className="
             text-[#036556]
             font-medium
@@ -59,7 +59,7 @@ export default function TextSection({
           "
         >
           {content}
-        </p>
+        </div>
       </div>
     </section>
   );

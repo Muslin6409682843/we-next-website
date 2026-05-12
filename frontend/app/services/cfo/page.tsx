@@ -4,6 +4,7 @@ import ServiceIntro from "../../components/sections/services/details/ServiceIntr
 import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
+import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
 
 export default function CFOPage() {
   return (
@@ -32,6 +33,112 @@ export default function CFOPage() {
       </SideAccentSection>
       <SectionDivider />
 
+      <SideAccentSection side="right">
+        <TextSection
+          title="เหมาะกับใคร เริ่มต้นกับทำ CFO กับเราหากองค์การของท่านต้องการสิ่งเหล้านี้"
+          content={
+            <div className="space-y-10">
+              {/* intro */}
+              <p>บริการนี้เหมาะกับ</p>
+
+              {/* numbered list */}
+              <ol className="list-decimal pl-8 space-y-5">
+                <li>
+                  องค์กรที่ต้องการเริ่มต้นจัดการเรื่องคาร์บอนอย่างเป็นระบบ
+                  แต่ยังไม่ทราบว่าควรเริ่มจากจุดใด
+                </li>
+
+                <li>
+                  บริษัทที่ต้องการทราบปริมาณการปล่อยก๊าซเรือนกระจกขององค์กร
+                  เพื่อใช้ในการวางแผนลดการปล่อย จัดทำรายงานด้านความยั่งยืน
+                  ตอบคำถามจากลูกค้า นักลงทุน หรือคู่ค้าทางธุรกิจ
+                </li>
+
+                <li>
+                  องค์กรที่กำลังเตรียมความพร้อมสู่เป้าหมาย Net Zero หรือ ESG
+                  Reporting ในอนาคต
+                </li>
+
+                <li>
+                  องค์กรที่มีหลายแผนก หลายกิจกรรม หรือหลายแหล่งใช้พลังงาน
+                  และต้องการให้มีผู้เชี่ยวชาญช่วยจัดระบบข้อมูลให้ชัดเจนตั้งแต่ต้น
+                </li>
+              </ol>
+            </div>
+          }
+        />
+      </SideAccentSection>
+      <SectionDivider />
+
+      <SideAccentSection side="left">
+        <TextSection
+          title="ขอบเขตการให้บริการ"
+          content={
+            <div className="space-y-10">
+              {/* intro */}
+              <p>WeNext ให้บริการตั้งแต่ต้นจนจบ ตั้งแต่</p>
+
+              {/* bullet */}
+              <ul className="list-disc pl-8 space-y-5">
+                <li>การกำหนดขอบเขตองค์กร</li>
+
+                <li>การออกแบบรายการข้อมูลที่ต้องใช้</li>
+
+                <li>การเก็บรวบรวมข้อมูลจากหน่วยงานที่เกี่ยวข้อง</li>
+
+                <li>การคำนวณปริมาณการปล่อยก๊าซเรือนกระจก</li>
+
+                <li>การจัดทำรายงานสรุปผล ไปจนถึงการให้</li>
+
+                <li>คำแนะนำแนวทางลดการปล่อยที่เหมาะกับบริบทของแต่ละองค์กร</li>
+              </ul>
+
+              {/* outro */}
+              <p>
+                โดยยึดหลักการทำงานที่เข้าใจง่าย ใช้งานได้จริง
+                และสื่อสารกับทีมของลูกค้าได้ชัดเจน
+                ซึ่งสอดคล้องกับแนวทางของทีมที่เน้นการอธิบายเรื่องซับซ้อนให้เข้าใจง่าย
+              </p>
+            </div>
+          }
+        />
+      </SideAccentSection>
+      <SectionDivider />
+
+      <WorkflowSection
+        steps={[
+          {
+            title: "การประชุมเริ่มต้นโครงการ",
+            description:
+              "เราพูดคุยเพื่อทำความเข้าใจลักษณะธุรกิจ โครงสร้างองค์กร สาขา กิจกรรมหลัก และวัตถุประสงค์ของการจัดทำ CFO",
+          },
+          {
+            title: "กำหนดขอบเขตและรายการข้อมูล",
+            description:
+              "เราจัดทำ checklist ข้อมูลที่ต้องใช้ เช่น ค่าไฟฟ้า เชื้อเพลิง การเดินทาง การใช้สารทำความเย็น ของเสีย และข้อมูลอื่นที่เกี่ยวข้อง",
+          },
+          {
+            title: "รวบรวมและตรวจสอบข้อมูล",
+            description:
+              "ทีมงานช่วยประสานและตรวจสอบความครบถ้วนของข้อมูล เพื่อให้การคำนวณมีความถูกต้องและลดภาระของลูกค้า",
+          },
+          {
+            title: "คำนวณและวิเคราะห์ผล",
+            description:
+              "เราคำนวณปริมาณการปล่อยก๊าซเรือนกระจก แยกตามแหล่งกำเนิด และวิเคราะห์ว่าแหล่งใดเป็น hotspot ที่ควรให้ความสำคัญ",
+          },
+          {
+            title: "จัดทำรายงานและนำเสนอผล",
+            description:
+              "ท่านจะได้รับรายงาน CFO ฉบับสมบูรณ์ พร้อมสรุปผู้บริหารและข้อเสนอแนะในการลดการปล่อยที่ทำได้จริง",
+          },
+          {
+            title: "ให้คำแนะนำต่อยอด",
+            description:
+              "หากองค์กรต้องการดำเนินการต่อ เช่น วางเป้าหมายลดคาร์บอน จัดทำแผนลดการปล่อย หรือเตรียมยื่นรับรองกับหน่วยงานที่เกี่ยวข้อง เราสามารถวางแผนต่อยอดร่วมกันได้",
+          },
+        ]}
+      />
     </main>
   );
 }
