@@ -95,21 +95,22 @@ export default function WorkflowSection({ steps }: Props) {
             {/* timeline */}
             <div className="relative flex flex-col gap-10 pt-10 pb-10">
               {/* line */}
+
               <div
                 className="
-      absolute
-      left-[130px]
+                  absolute
+                  left-[130px]
 
-      top-[190px]
-      bottom-[190px]
+                  top-[140px]
+                  bottom-[140px]
 
-      w-[6px]
+                  w-[6px]
 
-      bg-[#CCFFD6]
-      rounded-full
+                  bg-[#CCFFD6]
+                  rounded-full
 
-      max-[992px]:hidden
-    "
+                  max-[992px]:hidden
+                  "
               />
 
               {steps.map((step, index) => {

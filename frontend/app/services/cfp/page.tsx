@@ -4,6 +4,10 @@ import ServiceIntro from "../../components/sections/services/details/ServiceIntr
 import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
+import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
+import ConsultationSection from "../../components/sections/services/details/ConsultationSection";
+import FAQSection from "../../components/sections/services/details/FAQSection";
+import CTASection from "../../components/sections/services/details/CTASection";
 
 export default function CFPPage() {
   return (
@@ -51,6 +55,37 @@ export default function CFPPage() {
         />
       </SideAccentSection>
       <SectionDivider />
+
+      <WorkflowSection
+              steps={[
+                {
+                  title: "เลือกผลิตภัณฑ์และกำหนดวัตถุประสงค์",
+                  description:
+                    "เราช่วยกำหนดว่าจะศึกษาผลิตภัณฑ์ใด รุ่นใด หรือขนาดใด และต้องการนำผลไปใช้ในลักษณะใด",
+                },
+                {
+                  title: "กำหนดขอบเขตและหน่วยหน้าที่",
+                  description:
+                    "กำหนด functional unit และขอบเขตการศึกษาให้เหมาะสม เช่น cradle-to-gate หรือขอบเขตอื่นตามเป้าหมายของงาน",
+                },
+                {
+                  title: "เก็บข้อมูลตลอดห่วงโซ่ที่เกี่ยวข้อง",
+                  description:
+                    "รวบรวมข้อมูลวัตถุดิบ พลังงาน การผลิต บรรจุภัณฑ์ การขนส่ง และข้อมูลอื่นที่จำเป็น",
+                },
+                {
+                  title: "คำนวณและวิเคราะห์ hotspot",
+                  description:
+                    "เราคำนวณและวิเคราะห์ว่าขั้นตอนใดของผลิตภัณฑ์เป็นแหล่งปล่อยหลัก เพื่อให้ลูกค้าใช้ประโยชน์เชิงกลยุทธ์ได้จริง",
+                },
+                {
+                  title: "จัดทำรายงานและเอกสารประกอบ",
+                  description:
+                    "จัดทำรายงาน CFP และเอกสารที่พร้อมใช้ทั้งสำหรับการสื่อสารภายใน การนำเสนอให้ลูกค้า หรือการดำเนินการยื่นขอฉลากคาร์บอนต่อไป",
+                },
+              ]}
+            />
+            <SectionDivider />
 
       <SideAccentSection side="right">
         <TextSection

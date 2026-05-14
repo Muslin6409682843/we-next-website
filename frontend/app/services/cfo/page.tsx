@@ -8,6 +8,7 @@ import WorkflowSection from "../../components/sections/services/details/Workflow
 import ConsultationSection from "../../components/sections/services/details/ConsultationSection";
 import FAQSection from "../../components/sections/services/details/FAQSection";
 import CTASection from "../../components/sections/services/details/CTASection";
+import PricingSection from "../../components/sections/services/details/PricingSection";
 
 export default function CFOPage() {
   return (
@@ -204,6 +205,25 @@ export default function CFOPage() {
               "องค์กรสามารถนำผลไปใช้กำหนดเป้าหมายลดการปล่อย วางแผนมาตรการลดคาร์บอน จัดทำรายงาน ESG หรือใช้เป็นข้อมูลตั้งต้นสำหรับการพัฒนาแผน Net Zero",
           },
         ]}
+      />
+      <SectionDivider />
+
+      <PricingSection
+        title="ราคา"
+        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
+        items={[
+          {
+            content:
+              "สำหรับองค์กรขนาดเล็กที่มี 1 สถานประกอบการและโครงสร้างข้อมูลไม่ซับซ้อน",
+            price: "เริ่มต้น 45,000 บาท",
+          },
+          {
+            content:
+              "สำหรับองค์กรที่มีหลายสาขา หลายหน่วยงาน หรือมีข้อมูลจำนวนมาก",
+            price: "75,000 – 180,000 บาท",
+          },
+        ]}
+        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
       />
       <SectionDivider />
 
