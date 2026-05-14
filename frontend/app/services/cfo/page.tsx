@@ -7,6 +7,7 @@ import TextSection from "../../components/sections/services/details/TextSection"
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
 import ConsultationSection from "../../components/sections/services/details/ConsultationSection";
 import FAQSection from "../../components/sections/services/details/FAQSection";
+import CTASection from "../../components/sections/services/details/CTASection";
 
 export default function CFOPage() {
   return (
@@ -192,8 +193,21 @@ export default function CFOPage() {
             answer:
               "ระยะเวลาขึ้นอยู่กับขนาดองค์กรและความพร้อมของข้อมูล โดยทั่วไปใช้เวลาประมาณ 4–12 สัปดาห์",
           },
+          {
+            question: "CFO ต่างจาก CFP อย่างไร",
+            answer:
+              "CFO เป็นการประเมินในระดับ “องค์กร” ขณะที่ CFP เป็นการประเมินในระดับ “ผลิตภัณฑ์” ดังนั้นหากต้องการรู้ภาพรวมของบริษัทควรเริ่มจาก CFO แต่หากต้องการวิเคราะห์สินค้ารายชิ้นควรใช้ CFP",
+          },
+          {
+            question: "หลังทำ CFO แล้วทำอะไรต่อได้บ้าง",
+            answer:
+              "องค์กรสามารถนำผลไปใช้กำหนดเป้าหมายลดการปล่อย วางแผนมาตรการลดคาร์บอน จัดทำรายงาน ESG หรือใช้เป็นข้อมูลตั้งต้นสำหรับการพัฒนาแผน Net Zero",
+          },
         ]}
       />
+      <SectionDivider />
+
+      <CTASection />
     </main>
   );
 }

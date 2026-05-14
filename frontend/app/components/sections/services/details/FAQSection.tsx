@@ -15,7 +15,7 @@ type Props = {
 };
 
 export default function FAQSection({ items }: Props) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -78,10 +78,7 @@ export default function FAQSection({ items }: Props) {
             const isOpen = openIndex === index;
 
             return (
-              <div
-                key={index}
-                className="border-b-[2px] border-[#036556]"
-              >
+              <div key={index} className="border-b-[2px] border-[#036556]">
                 {/* QUESTION */}
                 <button
                   onClick={() => toggleItem(index)}
