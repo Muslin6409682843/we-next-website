@@ -5,9 +5,10 @@ import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
-import ConsultationSection from "../../components/sections/services/details/ConsultationSection";
+import ConsultationSectionCFP from "../../components/sections/services/details/ConsultationSectionCFP";
 import FAQSection from "../../components/sections/services/details/FAQSection";
 import CTASection from "../../components/sections/services/details/CTASection";
+import PricingSection from "../../components/sections/services/details/PricingSection";
 
 export default function CFPPage() {
   return (
@@ -57,35 +58,35 @@ export default function CFPPage() {
       <SectionDivider />
 
       <WorkflowSection
-              steps={[
-                {
-                  title: "เลือกผลิตภัณฑ์และกำหนดวัตถุประสงค์",
-                  description:
-                    "เราช่วยกำหนดว่าจะศึกษาผลิตภัณฑ์ใด รุ่นใด หรือขนาดใด และต้องการนำผลไปใช้ในลักษณะใด",
-                },
-                {
-                  title: "กำหนดขอบเขตและหน่วยหน้าที่",
-                  description:
-                    "กำหนด functional unit และขอบเขตการศึกษาให้เหมาะสม เช่น cradle-to-gate หรือขอบเขตอื่นตามเป้าหมายของงาน",
-                },
-                {
-                  title: "เก็บข้อมูลตลอดห่วงโซ่ที่เกี่ยวข้อง",
-                  description:
-                    "รวบรวมข้อมูลวัตถุดิบ พลังงาน การผลิต บรรจุภัณฑ์ การขนส่ง และข้อมูลอื่นที่จำเป็น",
-                },
-                {
-                  title: "คำนวณและวิเคราะห์ hotspot",
-                  description:
-                    "เราคำนวณและวิเคราะห์ว่าขั้นตอนใดของผลิตภัณฑ์เป็นแหล่งปล่อยหลัก เพื่อให้ลูกค้าใช้ประโยชน์เชิงกลยุทธ์ได้จริง",
-                },
-                {
-                  title: "จัดทำรายงานและเอกสารประกอบ",
-                  description:
-                    "จัดทำรายงาน CFP และเอกสารที่พร้อมใช้ทั้งสำหรับการสื่อสารภายใน การนำเสนอให้ลูกค้า หรือการดำเนินการยื่นขอฉลากคาร์บอนต่อไป",
-                },
-              ]}
-            />
-            <SectionDivider />
+        steps={[
+          {
+            title: "เลือกผลิตภัณฑ์และกำหนดวัตถุประสงค์",
+            description:
+              "เราช่วยกำหนดว่าจะศึกษาผลิตภัณฑ์ใด รุ่นใด หรือขนาดใด และต้องการนำผลไปใช้ในลักษณะใด",
+          },
+          {
+            title: "กำหนดขอบเขตและหน่วยหน้าที่",
+            description:
+              "กำหนด functional unit และขอบเขตการศึกษาให้เหมาะสม เช่น cradle-to-gate หรือขอบเขตอื่นตามเป้าหมายของงาน",
+          },
+          {
+            title: "เก็บข้อมูลตลอดห่วงโซ่ที่เกี่ยวข้อง",
+            description:
+              "รวบรวมข้อมูลวัตถุดิบ พลังงาน การผลิต บรรจุภัณฑ์ การขนส่ง และข้อมูลอื่นที่จำเป็น",
+          },
+          {
+            title: "คำนวณและวิเคราะห์ hotspot",
+            description:
+              "เราคำนวณและวิเคราะห์ว่าขั้นตอนใดของผลิตภัณฑ์เป็นแหล่งปล่อยหลัก เพื่อให้ลูกค้าใช้ประโยชน์เชิงกลยุทธ์ได้จริง",
+          },
+          {
+            title: "จัดทำรายงานและเอกสารประกอบ",
+            description:
+              "จัดทำรายงาน CFP และเอกสารที่พร้อมใช้ทั้งสำหรับการสื่อสารภายใน การนำเสนอให้ลูกค้า หรือการดำเนินการยื่นขอฉลากคาร์บอนต่อไป",
+          },
+        ]}
+      />
+      <SectionDivider />
 
       <SideAccentSection side="right">
         <TextSection
@@ -94,6 +95,60 @@ export default function CFPPage() {
         />
       </SideAccentSection>
       <SectionDivider />
+
+      <PricingSection
+        title="ราคา"
+        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
+        items={[
+          {
+            content: "กรณีข้อมูลผลิตภัณฑ์ไม่ซับซ้อนและขอบเขตจำกัด",
+            price: "เริ่มต้น 60,000 บาท (ต่อ 1 ผลิตภัณฑ์) ",
+          },
+          {
+            content:
+              "กรณีผลิตภัณฑ์มีหลาย SKU หลายสูตรการผลิต หรือมีข้อมูลซัพพลายเออร์หลายชั้น ราคาจะเป็นไปตามระดับความซับซ้อนและจำนวนผลิตภัณฑ์",
+            price: "75,000 – 180,000 บาท",
+          },
+        ]}
+        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
+      />
+      <SectionDivider />
+
+      <ConsultationSectionCFP />
+      <SectionDivider />
+
+      <FAQSection
+        items={[
+          {
+            question: "CFP คืออะไร",
+            answer:
+              "CFP หรือ Carbon Footprint of Product คือการประเมินปริมาณก๊าซเรือนกระจกของผลิตภัณฑ์ตลอดขอบเขตที่กำหนด เช่น ตั้งแต่วัตถุดิบ การผลิต บรรจุภัณฑ์ และการขนส่ง",
+          },
+          {
+            question: "ต้องทำทุกผลิตภัณฑ์หรือไม่",
+            answer:
+              "ไม่จำเป็น องค์กรสามารถเริ่มจากผลิตภัณฑ์หลัก ผลิตภัณฑ์ขายดี หรือสินค้าที่ลูกค้าให้ความสำคัญก่อน แล้วจึงขยายไปยังรายการอื่นในอนาคต",
+          },
+          {
+            question: "ถ้ามีหลาย SKU สามารถทำพร้อมกันได้หรือไม่",
+            answer:
+              "ได้ แต่ควรประเมินก่อนว่าผลิตภัณฑ์แต่ละรายการมีความแตกต่างกันมากน้อยเพียงใด เพื่อออกแบบขอบเขตงานให้คุ้มค่าที่สุด",
+          },
+          {
+            question: "ผลลัพธ์จาก CFP นำไปใช้ทำอะไรได้บ้าง",
+            answer:
+              "ใช้สื่อสารกับลูกค้าและคู่ค้า ใช้ประกอบการยื่นฉลากคาร์บอน ใช้วิเคราะห์ hotspot ของสินค้า และใช้วางแผนลดคาร์บอนในกระบวนการผลิต",
+          },
+          {
+            question: "ต้องมีข้อมูลซัพพลายเออร์ครบทั้งหมดหรือไม่",
+            answer:
+              "ไม่จำเป็นต้องครบทุกอย่างตั้งแต่ต้น ทีมงานจะช่วยประเมินว่าข้อมูลใดจำเป็นก่อน และแนะนำแนวทางจัดการในกรณีที่ข้อมูลบางส่วนยังไม่สมบูรณ์",
+          },
+        ]}
+      />
+      <SectionDivider />
+
+      <CTASection />
     </main>
   );
 }

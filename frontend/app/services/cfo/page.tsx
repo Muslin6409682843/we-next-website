@@ -5,7 +5,7 @@ import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
-import ConsultationSection from "../../components/sections/services/details/ConsultationSection";
+import ConsultationSectionCFO from "../../components/sections/services/details/ConsultationSectionCFO";
 import FAQSection from "../../components/sections/services/details/FAQSection";
 import CTASection from "../../components/sections/services/details/CTASection";
 import PricingSection from "../../components/sections/services/details/PricingSection";
@@ -173,7 +173,26 @@ export default function CFOPage() {
       </SideAccentSection>
       <SectionDivider />
 
-      <ConsultationSection />
+      <PricingSection
+        title="ราคา"
+        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
+        items={[
+          {
+            content:
+              "สำหรับองค์กรขนาดเล็กที่มี 1 สถานประกอบการและโครงสร้างข้อมูลไม่ซับซ้อน",
+            price: "เริ่มต้น 45,000 บาท",
+          },
+          {
+            content:
+              "สำหรับองค์กรที่มีหลายสาขา หลายหน่วยงาน หรือมีข้อมูลจำนวนมาก",
+            price: "75,000 – 180,000 บาท",
+          },
+        ]}
+        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
+      />
+      <SectionDivider />
+
+      <ConsultationSectionCFO />
       <SectionDivider />
 
       <FAQSection
@@ -208,24 +227,7 @@ export default function CFOPage() {
       />
       <SectionDivider />
 
-      <PricingSection
-        title="ราคา"
-        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
-        items={[
-          {
-            content:
-              "สำหรับองค์กรขนาดเล็กที่มี 1 สถานประกอบการและโครงสร้างข้อมูลไม่ซับซ้อน",
-            price: "เริ่มต้น 45,000 บาท",
-          },
-          {
-            content:
-              "สำหรับองค์กรที่มีหลายสาขา หลายหน่วยงาน หรือมีข้อมูลจำนวนมาก",
-            price: "75,000 – 180,000 บาท",
-          },
-        ]}
-        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
-      />
-      <SectionDivider />
+      
 
       <CTASection />
     </main>

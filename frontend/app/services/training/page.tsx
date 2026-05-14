@@ -4,6 +4,11 @@ import ServiceIntro from "../../components/sections/services/details/ServiceIntr
 import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
+import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
+import ConsultationSectionTraining from "../../components/sections/services/details/ConsultationSectionTraining";
+import FAQSection from "../../components/sections/services/details/FAQSection";
+import CTASection from "../../components/sections/services/details/CTASection";
+import PricingSection from "../../components/sections/services/details/PricingSection";
 
 export default function TrainingPage() {
   return (
@@ -64,6 +69,32 @@ export default function TrainingPage() {
       </SideAccentSection>
       <SectionDivider />
 
+      <WorkflowSection
+        steps={[
+          {
+            title: "พูดคุยความต้องการขององค์กร",
+            description:
+              "เราประเมินว่าผู้เข้าอบรมเป็นกลุ่มใด มีพื้นฐานแค่ไหน และองค์กรต้องการผลลัพธ์แบบใดจากการอบรม",
+          },
+          {
+            title: "ออกแบบหลักสูตรเฉพาะองค์กร",
+            description:
+              "กำหนดหัวข้อ ระยะเวลา รูปแบบการสอน และตัวอย่างประกอบที่สอดคล้องกับธุรกิจของท่าน",
+          },
+          {
+            title: "จัดอบรม",
+            description:
+              "อบรมในรูปแบบ onsite หรือ online โดยเน้นภาษาที่เข้าใจง่าย และเปิดพื้นที่ให้ซักถามได้จริง",
+          },
+          {
+            title: "สรุปผลและส่งมอบเอกสาร",
+            description:
+              "หลังอบรม ท่านจะได้รับเอกสารประกอบการเรียน สรุปสาระสำคัญ และข้อเสนอแนะสำหรับการดำเนินการต่อ",
+          },
+        ]}
+      />
+      <SectionDivider />
+
       <SideAccentSection side="left">
         <TextSection
           title="สิ่งที่ท่านจะได้รับ"
@@ -72,6 +103,64 @@ export default function TrainingPage() {
         />
       </SideAccentSection>
       <SectionDivider />
+
+      <PricingSection
+        title="ราคา"
+        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
+        items={[
+          {
+            content: "หลักสูตรอบรมครึ่งวัน",
+            price: "เริ่มต้น 18,000 บาท",
+          },
+          {
+            content: "หลักสูตรอบรม 1 วัน",
+            price: "เริ่มต้น 35,000 บาท",
+          },
+          {
+            content:
+              "หลักสูตรสำหรับผู้บริหารหรือหลักสูตรเฉพาะทางที่มี workshop เชิงลึก ขึ้นอยู่กับระยะเวลา จำนวนผู้เข้าอบรม และการออกแบบเนื้อหาเฉพาะองค์กร",
+            price: "45,000 – 95,000 บาท ",
+          },
+        ]}
+        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
+      />
+      <SectionDivider />
+
+      <ConsultationSectionTraining />
+      <SectionDivider />
+
+      <FAQSection
+        items={[
+          {
+            question: "สามารถออกแบบหลักสูตรเฉพาะองค์กรได้หรือไม่",
+            answer:
+              "ได้ หลักสูตรสามารถปรับตามประเภทธุรกิจ ระดับความรู้ของผู้เข้าอบรม และเป้าหมายขององค์กร",
+          },
+          {
+            question: "จัดอบรมได้ในรูปแบบใดบ้าง",
+            answer:
+              "สามารถจัดได้ทั้งแบบ onsite, online หรือ hybrid ตามความเหมาะสม",
+          },
+          {
+            question: "เหมาะกับผู้บริหารหรือพนักงานทั่วไปมากกว่ากัน",
+            answer:
+              "เหมาะได้ทั้งสองกลุ่ม โดยสามารถปรับเนื้อหาให้เหมาะกับผู้บริหาร ทีมปฏิบัติการ หรือพนักงานทั่วไปได้",
+          },
+          {
+            question: "ต้องมีพื้นฐานเรื่องคาร์บอนมาก่อนหรือไม่",
+            answer:
+              "ไม่จำเป็น หลักสูตรสามารถเริ่มตั้งแต่ระดับพื้นฐานสำหรับผู้ที่ไม่เคยเรียนเรื่องนี้มาก่อน",
+          },
+          {
+            question: "หลังอบรมแล้วจะได้รับอะไรบ้าง",
+            answer:
+              "โดยทั่วไปจะได้รับสไลด์หรือเอกสารประกอบ สรุปประเด็นสำคัญ และข้อเสนอแนะสำหรับการนำไปใช้ต่อภายในองค์กร",
+          },
+        ]}
+      />
+      <SectionDivider />
+
+      <CTASection />
     </main>
   );
 }

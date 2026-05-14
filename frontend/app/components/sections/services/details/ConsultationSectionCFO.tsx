@@ -1,8 +1,8 @@
-// /components/sections/services/details/ConsultationSection.tsx
+// /components/sections/services/details/ConsultationSectionCFO.tsx
 
 import Image from "next/image";
 
-export default function ConsultationSection() {
+export default function ConsultationSectionCFO() {
   return (
     <section
       className="

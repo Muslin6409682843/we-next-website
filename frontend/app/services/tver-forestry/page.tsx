@@ -4,6 +4,11 @@ import ServiceIntro from "../../components/sections/services/details/ServiceIntr
 import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
+import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
+import ConsultationSectionTverForesty from "../../components/sections/services/details/ConsultationSectionTverForesty";
+import FAQSection from "../../components/sections/services/details/FAQSection";
+import CTASection from "../../components/sections/services/details/CTASection";
+import PricingSection from "../../components/sections/services/details/PricingSection";
 
 export default function TverForestryPage() {
   return (
@@ -56,6 +61,42 @@ export default function TverForestryPage() {
       </SideAccentSection>
       <SectionDivider />
 
+      <WorkflowSection
+        steps={[
+          {
+            title: "ประเมินศักยภาพเบื้องต้นของพื้นที่",
+            description:
+              "เราตรวจสอบว่าพื้นที่ของท่านมีแนวโน้มเข้าหลักเกณฑ์ของโครงการหรือไม่ และควรใช้แนวทางพัฒนาแบบใด",
+          },
+          {
+            title: "สำรวจข้อมูลและเอกสารสิทธิ/ข้อมูลประกอบ",
+            description:
+              "ประเมินข้อมูลที่ดิน ประวัติพื้นที่ การใช้ประโยชน์เดิม และเอกสารที่จำเป็นต่อการพัฒนาโครงการ",
+          },
+          {
+            title: "ออกแบบขอบเขตและแนวทางโครงการ",
+            description:
+              "ช่วยกำหนดขอบเขตพื้นที่ วิธีเก็บข้อมูล และโครงสร้างเอกสารให้เหมาะกับลักษณะโครงการ",
+          },
+          {
+            title: "จัดทำเอกสารโครงการ",
+            description:
+              "จัดเตรียมข้อมูลและเอกสารสำคัญเพื่อใช้ในกระบวนการยื่นขึ้นทะเบียน",
+          },
+          {
+            title: "เตรียมความพร้อมก่อนยื่น",
+            description:
+              "ตรวจสอบความครบถ้วน ความสอดคล้อง และความพร้อมของเอกสารก่อนเข้าสู่กระบวนการที่เกี่ยวข้อง",
+          },
+          {
+            title: "ให้คำแนะนำหลังขึ้นทะเบียน",
+            description:
+              "แนะนำแนวทางการเก็บข้อมูลต่อเนื่อง การติดตามผล และการบริหารโครงการในระยะยาว",
+          },
+        ]}
+      />
+      <SectionDivider />
+
       <SideAccentSection side="right">
         <TextSection
           title="สิ่งที่ท่านจะได้รับ"
@@ -63,6 +104,64 @@ export default function TverForestryPage() {
         />
       </SideAccentSection>
       <SectionDivider />
+
+      <PricingSection
+        title="ราคา"
+        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
+        items={[
+          {
+            content: "สำหรับการประเมินศักยภาพเบื้องต้น",
+            price: "เริ่มต้น 35,000 บาท",
+          },
+          {
+            content:
+              "งานจัดทำเอกสารและพัฒนาโครงการสำหรับพื้นที่หรือโครงการขนาดเล็ก ที่มีข้อมูลพื้นฐานครบถ้วนและความซับซ้อนไม่มาก",
+            price: "เริ่มต้น 120,000 บาท",
+          },
+          {
+            content:
+              "โครงการขนาดใหญ่ หรือโครงการที่มีหลายแปลง หลายพื้นที่ และต้องใช้การสำรวจภาคสนามหรือจัดการข้อมูลจำนวนมาก",
+            price: "180,000 – 450,000 บาท",
+          },
+        ]}
+        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
+      />
+      <SectionDivider />
+
+      <ConsultationSectionTverForesty />
+      <SectionDivider />
+
+      <FAQSection
+        items={[
+          {
+            question: "ถ้ามีที่ดินอยู่แล้ว สามารถทำคาร์บอนเครดิตได้เลยหรือไม่",
+            answer:
+              "ไม่เสมอไป ต้องประเมินก่อนว่าพื้นที่นั้นมีคุณสมบัติสอดคล้องกับหลักเกณฑ์หรือไม่ และมีความพร้อมด้านข้อมูล เอกสาร และรูปแบบการดำเนินโครงการเพียงใด",
+          },
+          {
+            question: "ถ้าเป็นพื้นที่ไม่ใหญ่มาก สามารถทำได้หรือไม่",
+            answer:
+              "บางกรณีสามารถทำได้ แต่ต้องพิจารณาความคุ้มค่า ความพร้อมของข้อมูล และแนวทางการบริหารโครงการร่วมด้วย",
+          },
+          {
+            question: "ต้องมีเอกสารสิทธิครบก่อนหรือไม่",
+            answer:
+              "เอกสารสิทธิหรือเอกสารที่เกี่ยวข้องกับพื้นที่เป็นส่วนสำคัญ ทีมงานจะช่วยตรวจสอบเบื้องต้นว่าต้องใช้อะไรบ้าง และสิ่งใดควรเตรียมเพิ่มเติม",
+          },
+          {
+            question: "ระยะเวลาดำเนินการนานแค่ไหน",
+            answer:
+              "ระยะเวลาจะแตกต่างตามขนาดพื้นที่ ความพร้อมของข้อมูล และงานภาคสนาม โดยทั่วไปควรเริ่มจากการประเมินศักยภาพก่อน เพื่อให้เห็นภาพรวมของโครงการ",
+          },
+          {
+            question: "หลังขึ้นทะเบียนแล้วต้องทำอะไรต่อ",
+            answer:
+              "ต้องมีการติดตามข้อมูล การจัดเก็บหลักฐาน และการบริหารโครงการอย่างต่อเนื่อง ซึ่ง We Next สามารถให้คำแนะนำต่อเนื่องได้",
+          },
+        ]}
+      />
+      <SectionDivider />
+      <CTASection />
     </main>
   );
 }

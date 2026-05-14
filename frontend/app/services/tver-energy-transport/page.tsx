@@ -4,6 +4,11 @@ import ServiceIntro from "../../components/sections/services/details/ServiceIntr
 import SectionDivider from "../../components/ui/SectionDivider";
 import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
+import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
+import ConsultationSectionTverET from "@/app/components/sections/services/details/ConsultationSectionTverET";
+import FAQSection from "../../components/sections/services/details/FAQSection";
+import CTASection from "../../components/sections/services/details/CTASection";
+import PricingSection from "../../components/sections/services/details/PricingSection";
 
 export default function TverEnergyTransportPage() {
   return (
@@ -59,6 +64,42 @@ and Transport`}
       </SideAccentSection>
       <SectionDivider />
 
+      <WorkflowSection
+        steps={[
+          {
+            title: "คัดกรองโครงการเบื้องต้น",
+            description:
+              "เราประเมินลักษณะโครงการ เช่น Solar Cell, EV, ระบบประหยัดพลังงาน หรือมาตรการด้านขนส่ง ว่าเหมาะต่อการพัฒนาในรูปแบบคาร์บอนเครดิตหรือไม่",
+          },
+          {
+            title: "รวบรวมข้อมูลพลังงาน/การดำเนินงาน",
+            description:
+              "ตรวจสอบข้อมูลก่อนและหลังดำเนินโครงการ ข้อมูลการใช้พลังงาน ปริมาณการผลิตไฟฟ้า ระยะทาง หรือข้อมูลอื่นที่จำเป็น",
+          },
+          {
+            title: "วิเคราะห์ความเป็นไปได้และขอบเขตการคำนวณ",
+            description:
+              "กำหนดแนวทางการประเมินผลลดการปล่อยก๊าซเรือนกระจก และพิจารณาความพร้อมของเอกสารประกอบ",
+          },
+          {
+            title: "จัดทำเอกสารโครงการ",
+            description:
+              "จัดทำเอกสารและชุดข้อมูลที่จำเป็นสำหรับกระบวนการที่เกี่ยวข้อง",
+          },
+          {
+            title: "เตรียมความพร้อมก่อนยื่น",
+            description:
+              "ตรวจสอบความครบถ้วนและความสอดคล้องของข้อมูล เพื่อให้กระบวนการเดินหน้าได้อย่างราบรื่น",
+          },
+          {
+            title: "สนับสนุนการดำเนินงานต่อเนื่อง",
+            description:
+              "ให้คำแนะนำเรื่องการติดตามผล การจัดเก็บหลักฐาน และการบริหารข้อมูลสำหรับรอบต่อไป",
+          },
+        ]}
+      />
+      <SectionDivider />
+
       <SideAccentSection side="right">
         <TextSection
           title="สิ่งที่ท่านจะได้รับ"
@@ -66,6 +107,64 @@ and Transport`}
         />
       </SideAccentSection>
       <SectionDivider />
+
+      <PricingSection
+        title="ราคา"
+        subtitle="ค่าบริการขึ้นอยู่กับขนาดองค์กรและความซับซ้อนของข้อมูล"
+        items={[
+          {
+            content: "บริการประเมินความเป็นไปได้เบื้องต้น",
+            price: "เริ่มต้น 30,000 บาท",
+          },
+          {
+            content:
+              "บริการจัดทำเอกสารโครงการเต็มรูปแบบ สำหรับองค์กรขนาดเล็ก หรือโครงการที่มีขอบเขตไม่ซับซ้อน",
+            price: "เริ่มต้น 95,000 บาท",
+          },
+          {
+            content:
+              "บริการจัดทำเอกสารโครงการเต็มรูปแบบ สำหรับองค์กรขนาดกลางถึงขนาดใหญ่ ขึ้นอยู่กับประเภทโครงการ ปริมาณข้อมูลย้อนหลัง จำนวนไซต์งาน และความซับซ้อนของระบบ",
+            price: "150,000 – 400,000 บาท",
+          },
+        ]}
+        note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
+      />
+      <SectionDivider />
+
+      <ConsultationSectionTverET />
+      <SectionDivider />
+
+      <FAQSection
+        items={[
+          {
+            question: "โครงการแบบใดที่อาจเหมาะกับบริการนี้",
+            answer:
+              "ตัวอย่างเช่น Solar Cell, EV, ระบบประหยัดพลังงานในอาคารหรือโรงงาน การเปลี่ยนอุปกรณ์ที่ช่วยลดการใช้พลังงาน หรือมาตรการด้านขนส่งที่ช่วยลดการปล่อยก๊าซเรือนกระจก",
+          },
+          {
+            question: "ถ้าลงทุนโครงการไปแล้ว ยังทำได้หรือไม่",
+            answer:
+              "หลายกรณีสามารถประเมินย้อนหลังได้ แต่ต้องตรวจสอบรายละเอียดและความพร้อมของข้อมูลก่อน",
+          },
+          {
+            question: "ต้องมีข้อมูลย้อนหลังอะไรบ้าง",
+            answer:
+              "โดยทั่วไปควรมีข้อมูลการใช้พลังงาน การดำเนินงาน หรือข้อมูลก่อนและหลังติดตั้งโครงการตามความเหมาะสมของแต่ละกรณี",
+          },
+          {
+            question: "ถ้าไม่แน่ใจว่าเข้าเงื่อนไขหรือไม่ ควรทำอย่างไร",
+            answer:
+              "สามารถเริ่มจากการประเมินความเป็นไปได้เบื้องต้นก่อน เพื่อช่วยลดความเสี่ยงและวางขอบเขตงานได้เหมาะสม",
+          },
+          {
+            question: "บริการนี้ช่วยเรื่องเอกสารด้วยหรือไม่",
+            answer:
+              "ช่วยตั้งแต่การประเมินความเป็นไปได้ การจัดระบบข้อมูล ไปจนถึงการเตรียมเอกสารประกอบโครงการตามขอบเขตที่ตกลงกัน",
+          },
+        ]}
+      />
+      <SectionDivider />
+      <CTASection />
     </main>
   );
 }
