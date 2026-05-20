@@ -3,13 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ✅ NAVBAR HEIGHT (default fallback) */
+  --nav-height: 88px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,16 +15,41 @@
   }
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  /* กัน layout shift บาง browser */
+  overflow-x: hidden;
 }
 
+/* =========================
+   HERO TEXT SHADOW
+========================= */
 .text-shadow-hero {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* =========================
+   FIX SCROLL BAR SHIFT BUG
+========================= */
 html {
   overflow-y: scroll;
+}
+
+/* =========================
+   OPTIONAL: FIX ANCHOR JUMP (navbar fixed)
+   ใช้ถ้ามี scroll-to-section
+========================= */
+section {
+  scroll-margin-top: var(--nav-height);
 }

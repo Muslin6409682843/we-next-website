@@ -18,8 +18,7 @@ export default function AboutPage() {
         variant="right-text"
         type="image"
         src="/images/about-hero.jpg"
-        title={`ช่วยให้ประเทศไทยและประชาคมโลก
-เข้าสู่สังคมคาร์บอนต่ำ`}
+        title={`ช่วยให้ประเทศไทยและประชาคมโลกเข้าสู่สังคมคาร์บอนต่ำ`}
       />
 
       <FadeInSection>

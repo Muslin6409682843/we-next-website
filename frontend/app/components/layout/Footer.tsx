@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 
+
 export default function Footer() {
   return (
     <footer className="w-full bg-[#036556] text-white overflow-hidden">
@@ -63,12 +64,15 @@ export default function Footer() {
         {/* 🔹 RIGHT */}
         <div
           className="
-            relative grid grid-rows-[auto_auto_auto_auto] pt-[110px]
+            relative
+            grid grid-rows-[auto_auto_auto_auto]
+
+            pt-[110px]
 
             max-[1100px]:pt-0
           "
         >
-          {/* spacer ให้ตรงกับ logo */}
+          {/* spacer */}
           <div className="max-[1100px]:hidden"></div>
 
           {/* title */}
@@ -158,14 +162,23 @@ export default function Footer() {
           {/* 🔥 SOCIAL */}
           <div
             className="
-              absolute right-0 bottom-0 flex gap-5
+              absolute
+              right-0
+              bottom-0
 
-              max-[1280px]:relative
-              max-[1280px]:right-auto
-              max-[1280px]:bottom-auto
-              max-[1280px]:mt-20
+              flex gap-5
 
-              max-[1100px]:mt-8
+              /* 🔥 Nest Hub fix */
+              max-[1024px]:relative
+              max-[1024px]:right-auto
+              max-[1024px]:bottom-auto
+              max-[1024px]:mt-8
+
+              /* 🔥 จอเตี้ยแบบ Nest Hub */
+              max-h-[700px]:relative
+              max-h-[700px]:right-auto
+              max-h-[700px]:bottom-auto
+              max-h-[700px]:mt-8
 
               max-[640px]:gap-4
             "

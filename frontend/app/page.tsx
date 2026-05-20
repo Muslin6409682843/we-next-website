@@ -9,8 +9,7 @@ export default function Home() {
         variant="right-button"
         type="video"
         src="/videos/heroTrim.mp4"
-        title={`ให้คำปรึกษาการลด
-การปล่อยก๊าซเรือนกระจกสำหรับ SME`}
+        title={`ให้คำปรึกษาการลดการปล่อยก๊าซเรือนกระจกสำหรับ SME`}
       />
 
       {/* 🔽 SECTION: Services */}

@@ -1,4 +1,5 @@
-// /Hero/HeroContent.tsx
+import Link from "next/link";
+
 type Props = {
   size?: "large" | "small";
   variant?: "right-button" | "right-text" | "center-stack";
@@ -6,27 +7,71 @@ type Props = {
   subtitle?: string;
 };
 
-export default function HeroContent({ size, variant, title, subtitle }: Props) {
-  // 🎯 SMALL
+export default function HeroContent({
+  size = "large",
+  variant = "right-button",
+  title,
+  subtitle,
+}: Props) {
+  // SMALL HERO
   if (size === "small") {
     return (
-      <div className="w-full text-center">
-        <h1 className="text-white text-[48px] font-semibold text-shadow-hero">
+      <div
+        className="
+          flex
+          flex-col
+          items-center
+          justify-center
+
+          text-center
+        "
+      >
+        <h1
+          className="
+            text-white
+            font-semibold
+            whitespace-pre-line
+            text-shadow-hero
+
+            text-[clamp(24px,5vw,42px)]
+            leading-[1.15]
+
+            max-w-[18ch]
+          "
+        >
           {title}
         </h1>
       </div>
     );
   }
 
-  // 🎯 LARGE - CENTER STACK (แบบ 3)
+  // CENTER STACK
   if (variant === "center-stack") {
     return (
-      <div className="w-full text-center">
-        <h1 className="text-white text-[64px] font-semibold text-shadow-hero">
+      <div className="text-center space-y-4">
+        <h1
+          className="
+            text-white
+            font-semibold
+            whitespace-pre-line
+            text-shadow-hero
+
+            text-[clamp(28px,5vw,64px)]
+            leading-[1.1]
+          "
+        >
           {title}
         </h1>
+
         {subtitle && (
-          <h2 className="text-white text-[36px] font-semibold text-shadow-hero mt-5">
+          <h2
+            className="
+              text-white/90
+              font-medium
+
+              text-[clamp(16px,2vw,28px)]
+            "
+          >
             {subtitle}
           </h2>
         )}
@@ -34,62 +79,97 @@ export default function HeroContent({ size, variant, title, subtitle }: Props) {
     );
   }
 
-  // 🎯 LARGE - RIGHT ALIGN
+  // LARGE RIGHT CONTENT
   return (
-    <div className="w-full flex justify-end pr-[190px] mt-[140px]">
-      <div className="text-right max-w-none">
-        <h1
+    <div
+      className="
+      relative
+
+      flex
+      flex-col
+      items-end
+
+      text-right
+    "
+    >
+      {/* TITLE */}
+      <h1
+        className="
+        text-white
+        font-semibold
+        whitespace-pre-line
+        text-shadow-hero
+
+        text-[clamp(24px,4vw,56px)]
+        leading-[1.15]
+
+        max-w-[22ch]
+      "
+      >
+        {title}
+      </h1>
+
+      {/* BUTTON */}
+      {variant === "right-button" && (
+        <div
           className="
-            text-white
-            text-[64px]
-            font-semibold
-            leading-[97px]
-            text-shadow-hero
-            whitespace-pre-line
-          "
+          absolute
+
+          top-full
+          right-0
+
+          mt-5
+          sm:mt-6
+          lg:mt-8
+        "
         >
-          {title}
-        </h1>
-
-        {/* ปุ่ม (เฉพาะ variant 1) */}
-        {variant === "right-button" && (
-          <button
+          <Link
+            href="/services"
             className="
-    group
-    mt-[24px] w-[422px] h-[63px]
+    inline-flex
+    items-center
+    justify-center
+
+    px-5
+sm:px-6
+lg:px-8
+2xl:px-10
+
+h-11
+sm:h-12
+lg:h-14
+2xl:h-16
+
+text-sm
+sm:text-base
+lg:text-lg
+2xl:text-[22px]
+
     bg-[#73F68D]
-    rounded-tl-[30px] rounded-br-[30px]
-    text-[24px] font-medium text-[#036556]
+    text-[#036556]
 
-    flex items-center justify-center gap-2
-    ml-auto
+    font-medium
 
-    transition-all duration-300 ease-out
+    text-sm
+    sm:text-base
+    lg:text-lg
 
-    hover:shadow-xl
+    rounded-tl-[30px]
+    rounded-br-[30px]
+
+    whitespace-nowrap
+
+    transition-all
+    duration-300
+
     hover:-translate-y-[2px]
     active:scale-95
   "
           >
-            ขั้นตอนการเริ่มลดคาร์บอนกับเรา
-            {/* 🔽 SVG Arrow */}
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="
-      stroke-[#036556] stroke-[2.5]
-      transition-all duration-300
-      group-hover:translate-x-1
-    "
-            >
-              <path d="M5 12H19" />
-              <path d="M13 6L19 12L13 18" />
-            </svg>
-          </button>
-        )}
-      </div>
+            เริ่มต้นลดคาร์บอนกับเรา
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

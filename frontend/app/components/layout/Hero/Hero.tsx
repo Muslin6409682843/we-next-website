@@ -1,8 +1,10 @@
 import HeroContent from "./HeroContent";
+import { heroConfig } from "./heroStyles";
 
-type HeroProps = {
+type Props = {
   size?: "large" | "small";
   variant?: "right-button" | "right-text" | "center-stack";
+
   title: string;
   subtitle?: string;
 
@@ -12,54 +14,136 @@ type HeroProps = {
 
 export default function Hero({
   size = "large",
-  variant = "right-text",
+  variant = "right-button",
+
   title,
   subtitle,
+
   type = "image",
   src,
-}: HeroProps) {
-  const height =
-    size === "small"
-      ? "h-[335px]"
-      : variant === "center-stack"
-      ? "h-[685px]"
-      : "h-[657px]";
+}: Props) {
+  const isLarge = size === "large";
+
+  const largeConfig = heroConfig.large;
+  const smallConfig = heroConfig.small;
 
   return (
     <section
       className={`
-        relative w-full ${height}
-        flex items-center
-        overflow-hidden
-        rounded-tl-[30px] rounded-br-[30px]
-      `}
+    relative
+    w-full
+
+    ${
+      isLarge
+        ? largeConfig.height
+        : `
+          ${smallConfig.ratio}
+          ${smallConfig.minHeight}
+          ${smallConfig.maxHeight}
+        `
+    }
+
+    overflow-hidden
+  `}
     >
-      {/* 🎥 VIDEO */}
+      {/* VIDEO BACKGROUND */}
       {type === "video" && (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover"
+        <div
+          className="
+            absolute
+            inset-0
+
+            overflow-hidden
+          "
         >
-          <source src={src} type="video/mp4" />
-        </video>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="
+              absolute
+              top-1/2
+              left-1/2
+
+              min-w-full
+              min-h-full
+
+              w-auto
+              h-auto
+
+              -translate-x-1/2
+              -translate-y-1/2
+
+              object-cover
+            "
+          >
+            <source src={src} />
+          </video>
+        </div>
       )}
 
-      {/* 🖼️ IMAGE */}
+      {/* IMAGE BACKGROUND */}
       {type === "image" && (
         <div
-          className="absolute w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${src})` }}
+          className="
+            absolute
+            inset-0
+
+            bg-cover
+            bg-center
+          "
+          style={{
+            backgroundImage: `url(${src})`,
+          }}
         />
       )}
 
-      {/* 🔳 overlay */}
-      <div className="absolute inset-0 bg-black/10" />
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/35" />
 
-      {/* 📦 content */}
-      <div className="relative z-10 w-full">
+      {/* CONTENT */}
+      <div
+        className={`
+          absolute
+          inset-0
+          z-10
+
+          ${
+            size === "small"
+              ? `
+                flex
+                items-center
+                justify-center
+
+                text-center
+
+                px-6
+              `
+              : variant === "center-stack"
+                ? `
+                flex
+                items-center
+                justify-center
+
+                text-center
+
+                px-6
+              `
+                : `
+                flex
+                items-center
+                justify-end
+
+                px-4
+                sm:px-8
+                md:px-12
+                lg:px-20
+                xl:px-32
+              `
+          }
+        `}
+      >
         <HeroContent
           size={size}
           variant={variant}

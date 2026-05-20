@@ -1,4 +1,3 @@
-// /app/layout.tsx
 import "./globals.css";
 import { Noto_Sans_Thai } from "next/font/google";
 import Navbar from "./components/layout/Navbar";
@@ -18,8 +17,19 @@ export default function RootLayout({ children }: any) {
       <body className={noto.className}>
         <Navbar />
 
-        <main className="flex-1 pt-[138px]">{children}</main>
+        <main
+          className="
+    flex-1
 
+    pt-[88px]
+    sm:pt-[96px]
+    md:pt-[105px]
+    lg:pt-[120px]
+    xl:pt-[138px]
+  "
+        >
+          {children}
+        </main>
         <Footer />
         <CookieBanner />
         <GoogleAnalytics />

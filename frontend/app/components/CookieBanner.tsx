@@ -46,18 +46,6 @@ export default function CookieBanner() {
     setShowBanner(false);
 
     setOpenModal(false);
-
-    /*
-      OPTIONAL:
-
-      if (newPreferences.analytics) {
-        load analytics
-      }
-
-      if (newPreferences.marketing) {
-        load marketing scripts
-      }
-    */
   };
 
   const acceptAll = () => {
@@ -76,37 +64,45 @@ export default function CookieBanner() {
 
   return (
     <>
-      {/* BANNER */}
+      {/* =========================
+          BANNER
+      ========================== */}
       <div
         className="
           fixed
           left-1/2
           -translate-x-1/2
-          bottom-4
-          sm:bottom-6
-          lg:bottom-10
+
+          bottom-2
+          sm:bottom-4
+          lg:bottom-6
 
           z-[999]
 
-          w-[calc(100%-24px)]
-          sm:w-[calc(100%-40px)]
-          lg:w-[calc(100%-80px)]
+          w-[calc(100%-12px)]
+          sm:w-[calc(100%-24px)]
+          lg:w-[calc(100%-56px)]
 
-          max-w-[1400px]
+          max-w-[1380px]
 
           backdrop-blur-xl
           bg-white/20
           border border-white/30
           shadow-[0_8px_40px_rgba(0,0,0,0.18)]
 
-          px-5 py-5
-          sm:px-7 sm:py-6
-          lg:px-[40px] lg:py-[32px]
+          px-3
+          py-3
+
+          sm:px-5
+          sm:py-5
+
+          lg:px-8
+          lg:py-7
         "
         style={{
-          borderTopLeftRadius: "30px",
+          borderTopLeftRadius: "24px",
           borderTopRightRadius: "0px",
-          borderBottomRightRadius: "30px",
+          borderBottomRightRadius: "24px",
           borderBottomLeftRadius: "0px",
         }}
       >
@@ -117,26 +113,22 @@ export default function CookieBanner() {
             lg:items-end
             lg:justify-between
 
-            gap-6
-            lg:gap-10
+            gap-4
+            lg:gap-8
           "
         >
           {/* LEFT */}
-          <div
-            className="
-              w-full
-              lg:max-w-[900px]
-
-              flex flex-col gap-3
-              lg:gap-4
-            "
-          >
+          <div className="flex flex-col gap-2 lg:max-w-[880px]">
             <h3
               className="
-                font-semibold text-[#036556]
+                font-semibold
+                text-[#036556]
 
-                text-[22px]
-                sm:text-[24px]
+                text-[17px]
+                leading-tight
+
+                sm:text-[22px]
+
                 lg:text-[28px]
               "
             >
@@ -147,13 +139,14 @@ export default function CookieBanner() {
               className="
                 text-[#20443B]
 
-                text-[15px]
-                leading-[28px]
+                text-[12px]
+                leading-[21px]
 
-                sm:text-[16px]
+                sm:text-[14px]
+                sm:leading-[26px]
 
-                lg:text-[18px]
-                lg:leading-[32px]
+                lg:text-[17px]
+                lg:leading-[30px]
               "
             >
               เว็บไซต์นี้ใช้คุกกี้เพื่อพัฒนาประสบการณ์การใช้งาน
@@ -168,8 +161,7 @@ export default function CookieBanner() {
               flex flex-col
               sm:flex-row
 
-              gap-3
-              sm:gap-4
+              gap-2.5
 
               w-full
               lg:w-auto
@@ -186,12 +178,16 @@ export default function CookieBanner() {
                 w-full
                 sm:w-auto
 
-                px-7
-                py-4
+                px-4
+                sm:px-6
 
-                rounded-[16px]
+                py-3
 
-                text-[17px]
+                rounded-[14px]
+
+                text-[13px]
+                sm:text-[15px]
+
                 font-medium
 
                 hover:bg-[#036556]/10
@@ -211,17 +207,17 @@ export default function CookieBanner() {
                 w-full
                 sm:w-auto
 
-                px-7
-                py-4
+                px-4
+                sm:px-6
 
-                rounded-[16px]
+                py-3
 
-                text-[17px]
+                rounded-[14px]
+
+                text-[13px]
+                sm:text-[15px]
+
                 font-medium
-
-                hover:opacity-90
-
-                transition
               "
             >
               ยอมรับทั้งหมด
@@ -230,7 +226,9 @@ export default function CookieBanner() {
         </div>
       </div>
 
-      {/* MODAL */}
+      {/* =========================
+          MODAL
+      ========================== */}
       {openModal && (
         <div className="fixed inset-0 z-[1000]">
           {/* BACKDROP */}
@@ -247,39 +245,46 @@ export default function CookieBanner() {
           <div
             className="
               absolute
+
               left-1/2
-              top-1/2
+              top-[48%]
+
               -translate-x-1/2
               -translate-y-1/2
 
-              w-[95%]
-              max-w-[760px]
+              w-[86%]
+              xs:w-[82%]
+              sm:w-[78%]
+
+              max-w-[620px]
 
               bg-white
 
-              p-6
-              sm:p-8
-              lg:p-10
-
               shadow-2xl
+
+              px-3
+              py-3
+
+              sm:px-5
+              sm:py-5
             "
             style={{
-              borderTopLeftRadius: "32px",
+              borderTopLeftRadius: "22px",
               borderTopRightRadius: "0px",
-              borderBottomRightRadius: "32px",
+              borderBottomRightRadius: "22px",
               borderBottomLeftRadius: "0px",
             }}
           >
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-3">
               {/* HEADER */}
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
                 <h2
                   className="
                     text-[#036556]
                     font-semibold
 
-                    text-[28px]
-                    sm:text-[34px]
+                    text-[16px]
+                    sm:text-[22px]
                   "
                 >
                   การตั้งค่าคุกกี้
@@ -289,46 +294,49 @@ export default function CookieBanner() {
                   className="
                     text-[#20443B]
 
-                    text-[15px]
-                    leading-[30px]
+                    text-[10px]
+                    leading-[17px]
 
-                    sm:text-[16px]
-                    sm:leading-[32px]
+                    sm:text-[13px]
+                    sm:leading-[23px]
                   "
                 >
-                  เว็บไซต์ของเราใช้คุกกี้และเทคโนโลยีที่เกี่ยวข้องเพื่อยกระดับประสบการณ์การใช้งานของผู้เข้าชม
-                  ช่วยให้เว็บไซต์สามารถทำงานได้อย่างถูกต้อง
-                  วิเคราะห์พฤติกรรมการใช้งาน
-                  รวมถึงพัฒนาคุณภาพการให้บริการให้มีประสิทธิภาพมากยิ่งขึ้น
-                  ทั้งนี้
-                  ท่านสามารถเลือกอนุญาตการใช้งานคุกกี้ในแต่ละประเภทได้ตามความต้องการ
+                  เว็บไซต์ของเราใช้คุกกี้และเทคโนโลยีที่เกี่ยวข้องเพื่อยกระดับประสบการณ์การใช้งาน
+                  วิเคราะห์พฤติกรรมการใช้งาน และพัฒนาคุณภาพการให้บริการ
+                  ทั้งนี้ท่านสามารถเลือกอนุญาตการใช้งานคุกกี้ในแต่ละประเภทได้ตามความต้องการ
                   โดยคุกกี้ที่มีความจำเป็นต่อการทำงานของเว็บไซต์จะถูกเปิดใช้งานอยู่เสมอ
                 </p>
               </div>
 
               {/* COOKIE LIST */}
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-2">
                 {/* NECESSARY */}
                 <div
                   className="
-                    flex items-start justify-between gap-5
+                    flex items-center justify-between gap-2
 
                     border border-[#036556]/10
                     bg-[#F8FBFA]
 
-                    rounded-[22px]
+                    rounded-[14px]
 
-                    p-6
+                    px-2.5
+                    py-2.5
+
+                    sm:px-4
+                    sm:py-4
                   "
                 >
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-0.5">
                     <h3
                       className="
                         font-semibold
                         text-[#036556]
 
-                        text-[22px]
-                        sm:text-[24px]
+                        text-[11px]
+                        leading-tight
+
+                        sm:text-[16px]
                       "
                     >
                       คุกกี้ที่จำเป็น
@@ -336,31 +344,31 @@ export default function CookieBanner() {
 
                     <p
                       className="
-                        text-[15px]
-                        leading-[28px]
                         text-[#20443B]/80
+
+                        text-[9px]
+                        leading-[14px]
+
+                        sm:text-[12px]
+                        sm:leading-[20px]
                       "
                     >
-                      คุกกี้ประเภทนี้มีความจำเป็นต่อการทำงานของเว็บไซต์
-                      เพื่อให้ระบบสามารถทำงานได้อย่างถูกต้อง
-                      รองรับความปลอดภัยของข้อมูล
-                      และช่วยให้ผู้ใช้งานสามารถเข้าถึงฟังก์ชันพื้นฐานของเว็บไซต์ได้อย่างสมบูรณ์
+                      จำเป็นต่อการทำงานพื้นฐานและความปลอดภัยของเว็บไซต์
                     </p>
                   </div>
 
                   <div
                     className="
                       relative
-                      w-[72px]
-                      h-[40px]
+
+                      w-[42px]
+                      h-[24px]
+
+                      sm:w-[56px]
+                      sm:h-[30px]
 
                       rounded-full
-
                       bg-[#036556]
-
-                      shadow-inner
-
-                      cursor-not-allowed
 
                       shrink-0
                     "
@@ -371,13 +379,14 @@ export default function CookieBanner() {
                         top-1
                         right-1
 
-                        w-[32px]
-                        h-[32px]
+                        w-[16px]
+                        h-[16px]
+
+                        sm:w-[22px]
+                        sm:h-[22px]
 
                         rounded-full
                         bg-white
-
-                        shadow-md
                       "
                     />
                   </div>
@@ -386,24 +395,30 @@ export default function CookieBanner() {
                 {/* ANALYTICS */}
                 <div
                   className="
-                    flex items-start justify-between gap-5
+                    flex items-center justify-between gap-2
 
                     border border-[#036556]/10
                     bg-[#F8FBFA]
 
-                    rounded-[22px]
+                    rounded-[14px]
 
-                    p-6
+                    px-2.5
+                    py-2.5
+
+                    sm:px-4
+                    sm:py-4
                   "
                 >
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-0.5">
                     <h3
                       className="
                         font-semibold
                         text-[#036556]
 
-                        text-[22px]
-                        sm:text-[24px]
+                        text-[11px]
+                        leading-tight
+
+                        sm:text-[16px]
                       "
                     >
                       คุกกี้เพื่อการวิเคราะห์
@@ -411,14 +426,16 @@ export default function CookieBanner() {
 
                     <p
                       className="
-                        text-[15px]
-                        leading-[28px]
                         text-[#20443B]/80
+
+                        text-[9px]
+                        leading-[14px]
+
+                        sm:text-[12px]
+                        sm:leading-[20px]
                       "
                     >
-                      คุกกี้ประเภทนี้ช่วยให้เราสามารถวิเคราะห์พฤติกรรมการใช้งานเว็บไซต์
-                      เพื่อนำข้อมูลมาปรับปรุงประสิทธิภาพการทำงาน เนื้อหา
-                      และประสบการณ์การใช้งานให้ดียิ่งขึ้น
+                      เพื่อวิเคราะห์และปรับปรุงประสบการณ์การใช้งานเว็บไซต์
                     </p>
                   </div>
 
@@ -432,8 +449,12 @@ export default function CookieBanner() {
                     }
                     className={`
                       relative
-                      w-[72px]
-                      h-[40px]
+
+                      w-[42px]
+                      h-[24px]
+
+                      sm:w-[56px]
+                      sm:h-[30px]
 
                       rounded-full
 
@@ -450,13 +471,14 @@ export default function CookieBanner() {
                         absolute
                         top-1
 
-                        w-[32px]
-                        h-[32px]
+                        w-[16px]
+                        h-[16px]
+
+                        sm:w-[22px]
+                        sm:h-[22px]
 
                         rounded-full
                         bg-white
-
-                        shadow-lg
 
                         transition-all
                         duration-300
@@ -470,24 +492,30 @@ export default function CookieBanner() {
                 {/* MARKETING */}
                 <div
                   className="
-                    flex items-start justify-between gap-5
+                    flex items-center justify-between gap-2
 
                     border border-[#036556]/10
                     bg-[#F8FBFA]
 
-                    rounded-[22px]
+                    rounded-[14px]
 
-                    p-6
+                    px-2.5
+                    py-2.5
+
+                    sm:px-4
+                    sm:py-4
                   "
                 >
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-0.5">
                     <h3
                       className="
                         font-semibold
                         text-[#036556]
 
-                        text-[22px]
-                        sm:text-[24px]
+                        text-[11px]
+                        leading-tight
+
+                        sm:text-[16px]
                       "
                     >
                       คุกกี้เพื่อการตลาด
@@ -495,15 +523,16 @@ export default function CookieBanner() {
 
                     <p
                       className="
-                        text-[15px]
-                        leading-[28px]
                         text-[#20443B]/80
+
+                        text-[9px]
+                        leading-[14px]
+
+                        sm:text-[12px]
+                        sm:leading-[20px]
                       "
                     >
-                      คุกกี้ประเภทนี้ใช้เพื่อสนับสนุนกิจกรรมทางการตลาด
-                      การนำเสนอเนื้อหา โปรโมชั่น
-                      และโฆษณาที่สอดคล้องกับความสนใจของผู้ใช้งาน
-                      เพื่อมอบประสบการณ์ที่เหมาะสมมากยิ่งขึ้น
+                      เพื่อแสดงเนื้อหา โฆษณา และการตลาดที่เหมาะสมกับผู้ใช้งาน
                     </p>
                   </div>
 
@@ -517,8 +546,12 @@ export default function CookieBanner() {
                     }
                     className={`
                       relative
-                      w-[72px]
-                      h-[40px]
+
+                      w-[42px]
+                      h-[24px]
+
+                      sm:w-[56px]
+                      sm:h-[30px]
 
                       rounded-full
 
@@ -535,13 +568,14 @@ export default function CookieBanner() {
                         absolute
                         top-1
 
-                        w-[32px]
-                        h-[32px]
+                        w-[16px]
+                        h-[16px]
+
+                        sm:w-[22px]
+                        sm:h-[22px]
 
                         rounded-full
                         bg-white
-
-                        shadow-lg
 
                         transition-all
                         duration-300
@@ -556,11 +590,14 @@ export default function CookieBanner() {
               {/* BUTTONS */}
               <div
                 className="
-                  flex flex-col
+                  flex flex-col-reverse
                   sm:flex-row
 
-                  gap-4
+                  gap-2
+
                   sm:justify-end
+
+                  pt-1
                 "
               >
                 <button
@@ -569,12 +606,17 @@ export default function CookieBanner() {
                     border border-[#036556]
                     text-[#036556]
 
-                    px-8
-                    py-4
+                    w-full
+                    sm:w-auto
 
-                    rounded-[18px]
+                    px-4
+                    py-2.5
 
-                    text-[17px]
+                    rounded-[12px]
+
+                    text-[11px]
+                    sm:text-[14px]
+
                     font-medium
 
                     hover:bg-[#036556]/10
@@ -591,17 +633,18 @@ export default function CookieBanner() {
                     bg-[#036556]
                     text-white
 
-                    px-8
-                    py-4
+                    w-full
+                    sm:w-auto
 
-                    rounded-[18px]
+                    px-4
+                    py-2.5
 
-                    text-[17px]
+                    rounded-[12px]
+
+                    text-[11px]
+                    sm:text-[14px]
+
                     font-medium
-
-                    hover:opacity-90
-
-                    transition
                   "
                 >
                   ยอมรับทั้งหมด
