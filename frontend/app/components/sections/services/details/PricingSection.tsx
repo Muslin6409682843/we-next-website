@@ -21,157 +21,239 @@ export default function PricingSection({
   return (
     <section
       className="
-        w-full
-        bg-white
+      relative
+      overflow-hidden
+      bg-white
 
-        px-[210px]
-        py-[120px]
+      py-20
+      sm:py-24
+      lg:py-28
 
-        max-[1400px]:px-[120px]
-        max-[1200px]:px-[80px]
-        max-[992px]:px-[50px]
-        max-[768px]:px-[30px]
-        max-[640px]:px-5
-      "
+      px-5
+      sm:px-8
+      lg:px-12
+    "
     >
-      <div className="max-w-[1400px] mx-auto">
-        {/* heading */}
-        <div className="text-center mb-16">
+      <div
+        className="
+        max-w-[1380px]
+        mx-auto
+      "
+      >
+        {/* HEADING */}
+        <div
+          className="
+          text-center
+
+          max-w-[980px]
+          mx-auto
+
+          mb-10
+          sm:mb-14
+          lg:mb-16
+        "
+        >
+          {/* LABEL */}
+          <div
+            className="
+            inline-flex
+            items-center
+            gap-3
+
+            mb-5
+            sm:mb-6
+          "
+          >
+            <div className="w-8 sm:w-10 h-[1px] bg-[#73F68D]" />
+
+            <span
+              className="
+              text-[#73F68D]
+
+              uppercase
+              tracking-[0.24em]
+
+              text-[10px]
+              sm:text-[12px]
+            "
+            >
+              Pricing
+            </span>
+
+            <div className="w-8 sm:w-10 h-[1px] bg-[#73F68D]" />
+          </div>
+
+          {/* TITLE */}
           <h2
             className="
-              text-[#036556]
-              font-semibold
-              text-[48px]
-              leading-[68px]
+            text-[#036556]
 
-              max-[768px]:text-[38px]
-              max-[768px]:leading-[54px]
+            font-semibold
+            tracking-[-0.04em]
 
-              max-[640px]:text-[30px]
-              max-[640px]:leading-[44px]
-            "
+            leading-[1.08]
+
+            text-[30px]
+
+            sm:text-[42px]
+
+            md:text-[52px]
+
+            lg:text-[64px]
+          "
           >
             {title}
           </h2>
 
+          {/* SUBTITLE */}
           <p
             className="
-              mt-6
-              mx-auto
-              max-w-[900px]
+            mt-5
+            sm:mt-6
 
-              text-[#4D4D4D]
-              font-medium
-              text-[22px]
-              leading-[40px]
+            text-[#0B3F34]/75
 
-              max-[768px]:text-[18px]
-              max-[768px]:leading-[32px]
-            "
+            font-medium
+            leading-relaxed
+
+            text-[15px]
+
+            sm:text-[17px]
+
+            md:text-[20px]
+
+            lg:text-[22px]
+          "
           >
             {subtitle}
           </p>
         </div>
 
-        {/* table */}
+        {/* DESKTOP / TABLET */}
         <div
           className="
-            overflow-hidden
-            rounded-[36px]
+          hidden
+          md:block
 
-            border border-[#DDEEE8]
+          overflow-hidden
 
-            shadow-[0px_15px_50px_rgba(0,0,0,0.06)]
-          "
+          rounded-[34px]
+
+          border border-[#DCEEE8]
+
+          bg-white
+
+          shadow-[0_24px_60px_-35px_rgba(3,101,86,0.16)]
+        "
         >
-          {/* header */}
+          {/* HEADER */}
           <div
             className="
-              grid
-              grid-cols-[1.5fr_380px]
+  grid
+  grid-cols-[1.2fr_340px]
+  lg:grid-cols-[1fr_440px]
 
-              bg-[#036556]
-
-              max-[992px]:hidden
-            "
+  bg-[#036556]
+"
           >
-            <div className="px-10 py-7 border-r border-white/10">
-              <p className="text-white font-semibold text-[24px]">เนื้อหา</p>
+            <div className="px-8 lg:px-10 py-6 border-r border-white/10">
+              <p
+                className="
+                text-white
+
+                font-semibold
+
+                text-[18px]
+                lg:text-[22px]
+              "
+              >
+                รายละเอียดบริการ
+              </p>
             </div>
 
-            <div className="px-10 py-7">
-              <p className="text-white font-semibold text-[24px]">ราคา</p>
+            <div className="px-8 lg:px-10 py-6">
+              <p
+                className="
+                text-white
+
+                font-semibold
+
+                text-[18px]
+                lg:text-[22px]
+              "
+              >
+                ราคาเริ่มต้น
+              </p>
             </div>
           </div>
 
-          {/* rows */}
-          <div className="bg-white">
+          {/* ROWS */}
+          <div>
             {items.map((item, index) => (
               <div
                 key={index}
                 className={`
-                  grid
-                  grid-cols-[1.5fr_380px]
+    grid
+    grid-cols-[1.2fr_340px] lg:grid-cols-[1fr_440px]
 
-                  max-[992px]:grid-cols-1
-
-                  ${
-                    index !== items.length - 1
-                      ? "border-b border-[#E6F1EE]"
-                      : ""
-                  }
-                `}
+    ${index !== items.length - 1 ? "border-b border-[#E6F1EE]" : ""}
+  `}
               >
-                {/* content */}
+                {/* CONTENT */}
                 <div
                   className="
-                    px-10
-                    py-10
+                  px-8
+                  lg:px-10
 
-                    border-r
-                    border-[#E6F1EE]
+                  py-7
+                  lg:py-8
 
-                    max-[992px]:border-r-0
-                    max-[992px]:border-b
-                  "
+                  border-r border-[#E6F1EE]
+                "
                 >
                   <p
                     className="
-                      text-[#036556]
-                      font-medium
-                      text-[22px]
-                      leading-[40px]
+                    text-[#036556]
 
-                      max-[768px]:text-[18px]
-                      max-[768px]:leading-[32px]
-                    "
+                    font-medium
+                    leading-relaxed
+
+                    text-[17px]
+
+                    lg:text-[20px]
+                  "
                   >
                     {item.content}
                   </p>
                 </div>
 
-                {/* price */}
+                {/* PRICE */}
                 <div
                   className="
-                    flex
-                    items-center
+                  flex
+                  items-center
 
-                    px-10
-                    py-10
+                  bg-[#F7FFFB]
 
-                    bg-[#F8FCFB]
-                  "
+                  px-8
+                  lg:px-10
+
+                  py-7
+                  lg:py-8
+                "
                 >
                   <h3
                     className="
-  text-[#036556]
-  font-bold
-  text-[28px]
-  leading-[42px]
+                    text-[#036556]
 
-  max-[768px]:text-[24px]
-  max-[768px]:leading-[36px]
-"
+                    font-bold
+
+                    leading-tight
+
+                    text-[24px]
+
+                    lg:text-[30px]
+                  "
                   >
                     {item.price}
                   </h3>
@@ -181,30 +263,120 @@ export default function PricingSection({
           </div>
         </div>
 
-        {/* note */}
+        {/* MOBILE */}
+        <div
+          className="
+  md:hidden
+
+  flex
+  flex-col
+
+  gap-3
+"
+        >
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="
+      rounded-[24px]
+
+      border border-[#E4F0EC]
+
+      bg-white
+
+      p-5
+
+      shadow-[0_14px_34px_-28px_rgba(3,101,86,0.18)]
+    "
+            >
+              {/* CONTENT */}
+              <div>
+                <p
+                  className="
+          text-[#036556]
+
+          font-semibold
+          leading-[1.7]
+
+          text-[15px]
+        "
+                >
+                  {item.content}
+                </p>
+              </div>
+
+              {/* DIVIDER */}
+              <div className="my-4 h-[1px] bg-[#E6F1EE]" />
+
+              {/* PRICE */}
+              <div className="flex items-end justify-between gap-4">
+                <div>
+                  <p
+                    className="
+            text-[#62B3A4]
+
+            uppercase
+            tracking-[0.14em]
+
+            text-[10px]
+          "
+                  >
+                    ราคาเริ่มต้น
+                  </p>
+
+                  <h3
+                    className="
+            mt-1
+
+            text-[#036556]
+
+            font-bold
+            leading-none
+
+            text-[20px]
+          "
+                  >
+                    {item.price}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* NOTE */}
         {note && (
           <div
             className="
-              mt-8
+            mt-6
+            sm:mt-8
 
-              rounded-[24px]
+            rounded-[24px]
 
-              bg-[#F5FAF8]
+            border border-[#73F68D]/15
 
-              px-8
-              py-6
-            "
+            bg-[#F7FFFB]
+
+            px-5
+            sm:px-7
+
+            py-5
+            sm:py-6
+          "
           >
             <p
               className="
-                text-[#036556]
-                font-medium
-                text-[18px]
-                leading-[32px]
+              text-[#036556]
 
-                max-[768px]:text-[16px]
-                max-[768px]:leading-[28px]
-              "
+              font-medium
+              leading-relaxed
+
+              text-[14px]
+
+              sm:text-[16px]
+
+              lg:text-[18px]
+            "
             >
               {note}
             </p>

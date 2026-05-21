@@ -7,50 +7,104 @@ import { ArrowLeft } from "lucide-react";
 
 export default function BackToServices() {
   return (
-    <div
+    <section
       className="
-        w-full
-        flex justify-start
-        px-[210px]
-        pt-8
+      relative
+      w-full
+      bg-white
 
-        max-[1400px]:px-[120px]
-        max-[1200px]:px-[80px]
-        max-[992px]:px-[50px]
-        max-[768px]:px-[30px]
-        max-[640px]:px-5
-      "
+      pt-4
+      sm:pt-8
+      lg:pt-10
+
+      px-4
+      sm:px-8
+      lg:px-12
+    "
     >
-      <Link
-        href="/services"
+      <div
         className="
+        max-w-[1400px]
+        mx-auto
+      "
+      >
+        <Link
+          href="/services"
+          className="
           group
-          flex items-center gap-3
 
-          text-[#036556]
-          text-[24px]
-          font-medium
+          inline-flex
+          items-center
+          justify-center
+
+          gap-2
+          sm:gap-4
+
+          rounded-full
+
+          border border-[#73F68D]/20
+          bg-[#F7FFFB]
+
+          w-11 h-11
+          sm:w-auto sm:h-auto
+
+          sm:px-6
+          lg:px-7
+
+          sm:py-3.5
+          lg:py-4
 
           transition-all duration-300
-          hover:opacity-70
 
-          max-[768px]:text-[20px]
-          max-[640px]:text-[16px]
+          hover:border-[#73F68D]/40
+          hover:bg-[#F3FFF9]
         "
-      >
-        <ArrowLeft
-          className="
-            w-6 h-6
+        >
+          {/* ICON */}
+          <div
+            className="
+            flex items-center justify-center
+
+            w-7 h-7
+            sm:w-10 sm:h-10
+
+            rounded-full
+
+            bg-[#73F68D]/15
+            border border-[#73F68D]/20
+
             transition-transform duration-300
             group-hover:-translate-x-1
-
-            max-[640px]:w-5
-            max-[640px]:h-5
           "
-        />
+          >
+            <ArrowLeft
+              className="
+              text-[#036556]
 
-        <span>ย้อนกลับเพื่อดูบริการอื่น</span>
-      </Link>
-    </div>
+              w-3.5 h-3.5
+              sm:w-5 sm:h-5
+            "
+            />
+          </div>
+
+          {/* TEXT */}
+          <span
+            className="
+            hidden sm:block
+
+            text-[#036556]
+
+            font-semibold
+            leading-none
+
+            sm:text-[17px]
+            lg:text-[19px]
+          "
+          >
+            ย้อนกลับเพื่อดูบริการอื่น
+          </span>
+        </Link>
+      </div>
+    </section>
   );
 }
