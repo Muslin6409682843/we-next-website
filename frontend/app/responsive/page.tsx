@@ -16,64 +16,46 @@ export default function ResponsivePage() {
       {/* 🔽 SECTION: SERVICES */}
       <section
         className="
-          py-[56px]
-          sm:py-[72px]
-          lg:py-[88px]
-
-          px-4
-          sm:px-6
-          md:px-8
-          lg:px-12
-          xl:px-16
-          2xl:px-24
-        "
+    relative
+    py-[64px] sm:py-[84px] lg:py-[110px]
+    px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28
+    bg-white
+  "
       >
         {/* CONTAINER */}
-        <div
-          className="
-            mx-auto
-            w-full
-            max-w-[1700px]
-          "
-        >
-          {/* TITLE */}
-          <div
-            className="
-              flex
-              flex-col
-              items-center
-              text-center
-            "
-          >
+        <div className="mx-auto w-full max-w-[1400px]">
+          {/* HEADER BLOCK */}
+          <div className="text-center flex flex-col items-center">
+            {/* TITLE */}
             <h1
               className="
-                text-[#036556]
-                font-semibold
+          text-[#036556]
+          font-semibold
+          leading-tight
 
-                text-[clamp(32px,5vw,48px)]
-
-                mb-5
-                sm:mb-6
-              "
+          text-[clamp(30px,4vw,52px)]
+        "
             >
               บริการของเรา
             </h1>
 
-            {/* SUBTITLE */}
+            {/* decorative line */}
+            <div className="mt-5 w-16 h-[2px] bg-[#73F68D]" />
+
+            {/* SUBTITLE (FIXED READABILITY COLUMN) */}
             <p
               className="
-                text-[#6A6388]
+          mt-6
 
-                text-[clamp(16px,2vw,24px)]
+          text-[#6A6388]
+          leading-[1.75]
 
-                leading-[1.7]
+          text-[clamp(15px,1.4vw,20px)]
 
-                max-w-[95%]
-                sm:max-w-[88%]
-                lg:max-w-[1000px]
-                xl:max-w-[1150px]
-                2xl:max-w-[1250px]
-              "
+          max-w-[720px] sm:max-w-[780px] lg:max-w-[900px]
+
+          text-center
+        "
             >
               เราพร้อมช่วยเหลือองค์กรของท่านในทุกขั้นตอนของการลดการปล่อยก๊าซเรือนกระจก
               เพียงแค่บอกเราว่าองค์กรของท่านดำเนินธุรกิจประเภทใด และอยู่ที่ไหน —
