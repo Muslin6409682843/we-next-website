@@ -2,7 +2,6 @@ import Hero from "../../components/layout/Hero/Hero";
 import BackToServices from "../../components/sections/services/details/BackToServices";
 import ServiceIntro from "../../components/sections/services/details/ServiceIntro";
 import SectionDivider from "../../components/ui/SectionDivider";
-import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
 import ConsultationSectionTverForesty from "../../components/sections/services/details/ConsultationSectionTverForesty";
@@ -35,30 +34,27 @@ export default function TverForestryPage() {
       />
       <SectionDivider />
 
-      <SideAccentSection side="left">
+      
         <TextSection
           title="ทำไมบริการนี้จึงสำคัญ"
           content="หลายองค์กรและเจ้าของที่ดินทราบว่าพื้นที่สีเขียวของตนมีคุณค่า แต่ไม่แน่ใจว่าจะพัฒนาเป็นโครงการคาร์บอนเครดิตได้จริงหรือไม่ จุดที่ยากมักไม่ใช่เพียงการมีพื้นที่ แต่คือการเข้าใจหลักเกณฑ์ วิธีการคำนวณ เอกสารสนับสนุน การออกแบบขอบเขตโครงการ และการจัดระบบข้อมูลให้สอดคล้องกับข้อกำหนด บริการนี้จึงเหมาะกับผู้ที่ต้องการเปลี่ยน “ศักยภาพ” ให้กลายเป็น “โครงการที่ดำเนินการได้จริง” โดยมีที่ปรึกษาช่วยลดความเสี่ยงจากการเริ่มต้นผิดทาง
                 "
         />
-      </SideAccentSection>
       <SectionDivider />
 
-      <SideAccentSection side="right">
+     
         <TextSection
           title="เหมาะกับใคร"
           content="บริการนี้เหมาะกับเจ้าของที่ดิน องค์กร ชุมชน วิสาหกิจชุมชน หรือหน่วยงานที่มีพื้นที่ป่า พื้นที่ปลูกไม้ยืนต้น หรือพื้นที่ที่มีศักยภาพจะพัฒนาเป็นโครงการคาร์บอนเครดิต เหมาะสำหรับผู้ที่ต้องการประเมินว่าพื้นที่ของตนสามารถเข้าสู่กระบวนการ T-VER ได้หรือไม่ และเหมาะกับผู้ที่ต้องการมีที่ปรึกษาช่วยวางระบบเอกสาร ข้อมูลพื้นที่ และแนวทางดำเนินโครงการอย่างถูกต้องตั้งแต่ต้น เพื่อลดความเสี่ยงจากการเริ่มต้นผิดหลักเกณฑ์"
         />
-      </SideAccentSection>
+  
       <SectionDivider />
 
-      <SideAccentSection side="left">
         <TextSection
           title="ขอบเขตการให้บริการ"
           content="We Next ให้บริการตั้งแต่การประเมินความเป็นไปได้เบื้องต้น การตรวจสอบข้อมูลพื้นที่ การให้คำแนะนำเรื่องรูปแบบโครงการ การวางแผนการเก็บข้อมูลภาคสนาม การจัดทำเอกสารประกอบโครงการ และการเตรียมความพร้อมสำหรับการขึ้นทะเบียน โดยอาศัยความเชี่ยวชาญของทีมในด้าน T-VER ป่าไม้
                 "
         />
-      </SideAccentSection>
       <SectionDivider />
 
       <WorkflowSection
@@ -97,12 +93,11 @@ export default function TverForestryPage() {
       />
       <SectionDivider />
 
-      <SideAccentSection side="right">
+      
         <TextSection
           title="สิ่งที่ท่านจะได้รับ"
           content="ท่านจะได้รับรายงานการประเมินความเป็นไปได้เบื้องต้น ข้อเสนอแนวทางพัฒนาโครงการ รายการข้อมูลและเอกสารที่ต้องเตรียม ชุดเอกสารโครงการที่พร้อมใช้ในขั้นตอนที่เกี่ยวข้อง และคำแนะนำสำหรับการดำเนินงานต่อเนื่องหลังขึ้นทะเบียน"
         />
-      </SideAccentSection>
       <SectionDivider />
 
       <PricingSection
@@ -126,9 +121,6 @@ export default function TverForestryPage() {
         ]}
         note="ราคาข้างต้นเป็นราคาโดยประมาณ ทั้งนี้อาจมีการเปลี่ยนแปลงตามขอบเขตงานและความต้องการเฉพาะของแต่ละองค์กร"
       />
-      <SectionDivider />
-
-      <ConsultationSectionTverForesty />
       <SectionDivider />
 
       <FAQSection
