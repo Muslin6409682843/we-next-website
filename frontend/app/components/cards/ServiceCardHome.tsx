@@ -5,6 +5,7 @@ import {
   TreeDeciduous,
   Zap,
   Presentation,
+  ArrowRight,
 } from "lucide-react";
 
 const iconMap = {
@@ -31,58 +32,164 @@ export default function ServiceCardHome({
   icon,
 }: Props) {
   const Icon = iconMap[icon];
+
   return (
-    <Link href={href} className="block w-full max-w-[800px]">
-      <div
+    <Link href={href} className="group block h-full">
+      <article
         className="
+          relative
+          h-full
+
           bg-white
-          rounded-tl-[30px] rounded-br-[30px]
-          shadow-md
-          p-[40px]
-          cursor-pointer
-          transition-all duration-300
-          hover:-translate-y-2
-          hover:shadow-2xl
+          border border-[#E9EFEC]
+
+          rounded-tl-[28px]
+          rounded-br-[28px]
+          rounded-tr-[6px]
+          rounded-bl-[6px]
+
+          overflow-hidden
+
+          p-6
+          sm:p-7
+          lg:p-9
+
+          transition-all
+          duration-300
+
+          hover:-translate-y-1
+          hover:shadow-[0_18px_60px_rgba(0,0,0,0.08)]
         "
       >
-        {/* 🔹 TOP */}
-        <div className="flex items-start gap-4 mb-4">
+        {/* TOP */}
+        <div
+          className="
+            flex
+            items-center
+
+            gap-4
+
+            mb-5
+            sm:mb-6
+          "
+        >
           {/* ICON */}
-          <div className="w-[58px] h-[58px] border-2 border-[#73F68D] rounded-full flex items-center justify-center shrink-0">
-            <Icon size={28} className="text-[#73F68D]" />
+          <div
+            className="
+              shrink-0
+
+              flex
+              items-center
+              justify-center
+
+              w-[44px]
+              h-[44px]
+
+              sm:w-[52px]
+              sm:h-[52px]
+
+              rounded-full
+
+              bg-[#73F68D]/10
+            "
+          >
+            <Icon
+              className="
+                text-[#36C96B]
+
+                w-5
+                h-5
+
+                sm:w-6
+                sm:h-6
+              "
+              strokeWidth={2.2}
+            />
           </div>
 
-          {/* TITLE + HIGHLIGHT */}
-          <div className="flex flex-col">
-            <h3 className="text-[32px] font-medium text-[#036556] leading-tight text-left m-0">
-              {title}
-            </h3>
+          {/* TITLE */}
+          <h3
+            className="
+              text-[#036556]
+              font-semibold
 
-            <span className="block text-[24px] text-[#F04F23] leading-[30px] text-left">
-              {highlight}
-            </span>
-          </div>
+              leading-[1.25]
+              tracking-[-0.02em]
+
+              text-[22px]
+              sm:text-[26px]
+              lg:text-[32px]
+            "
+          >
+            {title}
+          </h3>
         </div>
 
-        {/* 🔹 DESCRIPTION */}
-        <p className="text-[24px] text-[#036556] leading-relaxed text-left mb-4">
+        {/* HIGHLIGHT */}
+        <p
+          className="
+            text-[#F04F23]
+
+            leading-[1.5]
+
+            text-[15px]
+            sm:text-[17px]
+            lg:text-[20px]
+
+            mb-5
+          "
+        >
+          {highlight}
+        </p>
+
+        {/* DESCRIPTION */}
+        <p
+          className="
+            text-[#4E6470]
+
+            leading-[1.8]
+
+            text-[15px]
+            sm:text-[17px]
+            lg:text-[20px]
+          "
+        >
           {description}
         </p>
 
-        {/* 🔹 CTA */}
-        <div className="flex items-center gap-2 text-[#73F68D] text-[24px]">
+        {/* CTA */}
+        <div
+          className="
+            mt-7
+            sm:mt-8
+
+            flex
+            items-center
+            gap-2
+
+            text-[#36C96B]
+            font-medium
+
+            text-[15px]
+            sm:text-[16px]
+            lg:text-[18px]
+          "
+        >
           <span>ดูรายละเอียดเพิ่มเติม</span>
 
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            className="fill-[#73F68D]"
-          >
-            <path d="M8 5l8 7-8 7V5z" />
-          </svg>
+          <ArrowRight
+            className="
+              w-4
+              h-4
+
+              transition-transform
+              duration-300
+
+              group-hover:translate-x-1
+            "
+          />
         </div>
-      </div>
+      </article>
     </Link>
   );
 }

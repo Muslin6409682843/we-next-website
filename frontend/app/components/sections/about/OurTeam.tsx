@@ -34,7 +34,18 @@ export default function OurTeam() {
     const text = role.replace("|", "").trim();
 
     return (
-      <p className="text-[32px] font-semibold mb-[20px]">
+      <p
+        className="
+          text-[14px]
+          sm:text-[16px]
+          md:text-[18px]
+          lg:text-[20px]
+          2xl:text-[22px]
+
+          font-semibold
+          mb-3
+        "
+      >
         <span className="text-[#036556]">| </span>
         <span className="text-[#73F68D]">{text}</span>
       </p>
@@ -43,22 +54,44 @@ export default function OurTeam() {
 
   return (
     <section className="w-full bg-[#DFF7EF]">
-      <div className="w-full pt-[80px] pb-[20px] pl-[158px]">
-  <div className="flex items-center gap-[16px]">
-    
-    {/* 🔹 LOGO */}
-    <img
-      src="/images/logo-team.png" 
-      alt="ทีมงาน"
-      className="w-[57px] h-[60px] object-contain"
-    />
+      {/* HEADER */}
+      <div
+        className="
+          mx-auto
+          max-w-[1280px]
+          2xl:max-w-[1500px]
 
-    {/* 🔹 TITLE */}
-    <h2 className="text-[44px] font-semibold text-[#036556] leading-tight">
-      ทีมงานของเรา
-    </h2>
-  </div>
-</div>
+          px-5 sm:px-6 md:px-10 lg:px-12 2xl:px-16
+
+          pt-10 sm:pt-14 lg:pt-20 2xl:pt-24
+          pb-6
+        "
+      >
+        <div className="flex items-center gap-3 sm:gap-4">
+          <img
+            src="/images/logo-team.png"
+            alt="ทีมงาน"
+            className="w-[40px] sm:w-[50px] md:w-[57px] 2xl:w-[64px] h-auto object-contain"
+          />
+
+          <h2
+            className="
+              text-[#036556]
+              font-semibold
+
+              text-[26px]
+              sm:text-[32px]
+              md:text-[38px]
+              lg:text-[44px]
+              2xl:text-[52px]
+
+              leading-tight
+            "
+          >
+            ทีมงานของเรา
+          </h2>
+        </div>
+      </div>
 
       {/* CARDS */}
       <div className="flex flex-col">
@@ -68,33 +101,84 @@ export default function OurTeam() {
           return (
             <div
               key={index}
-              className={`w-full py-[80px] ${
-                isGreen ? "bg-[#DFF7EF]" : "bg-white"
-              }`}
+              className={`
+                w-full
+                ${isGreen ? "bg-[#DFF7EF]" : "bg-white"}
+
+                py-10 sm:py-14 lg:py-20 2xl:py-24
+              `}
             >
               <div
-                className={`flex gap-[60px] w-full items-center ${
-                  isGreen ? "pl-[158px] pr-[158px]" : "pl-[158px] pr-[100px]"
-                } ${!isGreen ? "flex-row-reverse" : "flex-row"}`}
+                className="
+                  mx-auto
+                  max-w-[1280px]
+                  2xl:max-w-[1500px]
+
+                  px-5 sm:px-6 md:px-10 lg:px-12 2xl:px-16
+
+                  flex flex-col lg:flex-row
+                  gap-8 lg:gap-14 2xl:gap-20
+
+                  items-center
+                "
               >
                 {/* IMAGE */}
-                <div className="w-[400px] h-[400px] flex-shrink-0">
+                <div
+                  className="
+                    w-full
+                    max-w-[260px]
+                    sm:max-w-[320px]
+                    md:max-w-[360px]
+                    lg:max-w-[400px]
+                    2xl:max-w-[460px]
+
+                    aspect-square
+                    flex-shrink-0
+                  "
+                >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover rounded-[16px]"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
 
                 {/* TEXT */}
-                <div className="flex-1 max-w-[1100px]">
-                  <h3 className="text-[32px] font-semibold text-[#036556] mb-[8px]">
+                <div className="flex-1 text-left">
+                  <h3
+                    className="
+                      text-[#036556]
+                      font-semibold
+
+                      text-[20px]
+                      sm:text-[24px]
+                      md:text-[28px]
+                      lg:text-[32px]
+                      2xl:text-[38px]
+
+                      mb-2
+                    "
+                  >
                     {member.name}
                   </h3>
 
                   {renderRole(member.role)}
 
-                  <p className="w-full text-[24px] leading-[36px] font-medium text-[#036556] whitespace-pre-line">
+                  <p
+                    className="
+                      text-[#036556]
+                      font-medium
+
+                      text-[14px]
+                      sm:text-[16px]
+                      md:text-[18px]
+                      lg:text-[20px]
+                      2xl:text-[22px]
+
+                      leading-relaxed
+                      whitespace-pre-line
+                    "
+                  >
                     {member.content}
                   </p>
                 </div>

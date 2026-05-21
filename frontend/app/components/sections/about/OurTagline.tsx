@@ -1,45 +1,65 @@
-import { Icon } from "@iconify/react";
-
 export default function OurTagline() {
   return (
-    <section className="w-full bg-white py-[120px] flex justify-center">
-      {/* 🔥 container กลางจริง + ปรับ balance */}
-      <div className="flex items-center gap-[80px] translate-x-[45px]">
-        {/* 🔹 LEFT: TEXT */}
-        <div className="relative w-[705px] flex-shrink-0">
-          {/* 🔸 QUOTE ICON (ซ้ายบน) */}
-          <Icon
-            icon="si:quote-fill"
-            className="absolute top-[-15px] -left-[50px] w-[46px] h-[46px] text-[#036556] rotate-180 z-10"
-          />
+    <section className="w-full bg-white py-20 lg:py-28">
+      <div className="max-w-[1500px] mx-auto px-6 lg:px-14">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] items-center gap-12 lg:gap-20">
+          {/* LEFT */}
+          <div className="lg:pr-10">
+            <div className="px-2 sm:px-4 lg:px-6">
+              <h2 className="text-[#036556] font-semibold leading-snug text-[28px] sm:text-[36px] lg:text-[46px] xl:text-[52px] max-w-[900px]">
+                <span className="text-[#73F68D]">เรื่องใกล้ตัว</span> เล็กๆ
+                น้อยๆ หากเราใส่ใจ ก็ช่วย{" "}
+                <span className="text-[#73F68D] whitespace-nowrap">
+                  ลดโลกร้อน
+                </span>{" "}
+                ได้เหมือนกัน
+              </h2>
 
-          {/* 🔸 TEXT */}
-          <h2 className="text-[48px] leading-[72px] font-semibold text-[#036556]">
-            <span className="text-[#73F68D]">เรื่องใกล้ตัว</span>
-            เล็กๆ น้อยๆ หากเราใส่ใจ
-            <br />
-            ก็ช่วย
-            <span className="text-[#73F68D]">ลดโลกร้อน</span>
-            ได้เหมือนกัน
-          </h2>
+              <div className="mt-8 w-20 lg:w-24 h-[2px] bg-[#73F68D]" />
 
-          {/* 🔸 AUTHOR */}
-          <p className="text-[24px] text-[#036556] mt-[24px]">— คุณอาร์ม</p>
+              <p className="mt-6 text-[#036556]/80 text-[16px] lg:text-[18px] font-medium">
+                — คุณอาร์ม
+              </p>
+            </div>
+          </div>
 
-          {/* 🔸 QUOTE ICON (ขวาล่าง) */}
-          <Icon
-            icon="si:quote-fill"
-            className="absolute bottom-[95px] right-[85px] w-[46px] h-[46px] text-[#036556]"
-          />
-        </div>
+          {/* RIGHT IMAGE (FIXED HEIGHT FLOW) */}
+          <div className="flex items-center">
+            <div
+              className="
+              w-full
+              shadow-md
+              rounded-tl-[30px]
+              rounded-br-[30px]
+              overflow-hidden
 
-        {/* 🔹 RIGHT: IMAGE */}
-        <div className="w-[640px] h-[360px] flex-shrink-0">
-          <img
-            src="/images/tagline.jpg"
-            alt="tagline"
-            className="w-full h-full object-cover rounded-[30px_0px]"
-          />
+              max-h-[260px] sm:max-h-[320px] md:max-h-[340px] lg:max-h-none
+            "
+            >
+              <div
+                className="
+                relative w-full
+
+                aspect-[4/3]
+                md:aspect-[3/2]
+                lg:aspect-[16/10]
+              "
+              >
+                <img
+                  src="/images/tagline.jpg"
+                  alt="tagline"
+                  className="
+                    absolute inset-0
+                    w-full h-full
+                    object-cover
+                    block
+                  "
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-transparent" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
