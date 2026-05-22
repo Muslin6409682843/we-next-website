@@ -21,7 +21,7 @@ export default function GoogleAnalytics() {
   return (
     <>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+        src="https://www.googletagmanager.com/gtag/js?id=G-VRK8NMTC4S"
         strategy="afterInteractive"
       />
 
@@ -33,7 +33,7 @@ export default function GoogleAnalytics() {
 
           gtag('js', new Date());
 
-          gtag('config', 'G-XXXXXXXXXX');
+          gtag('config', 'G-VRK8NMTC4S');
         `}
       </Script>
     </>
