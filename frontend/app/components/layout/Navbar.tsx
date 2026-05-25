@@ -25,8 +25,7 @@ export default function Navbar() {
       className="
         fixed top-0 left-0 z-50
         w-full
-        bg-white
-        border-b border-[#E8E8E8]
+        bg-[#036556]
       "
     >
       {/* MAIN NAVBAR */}
@@ -58,7 +57,7 @@ export default function Navbar() {
         <div className="flex items-center z-20">
           <Link href="/">
             <img
-              src="/logo.png"
+              src="/logo-white.png"
               alt="WeNext Logo"
               className="
                 object-contain cursor-pointer
@@ -108,7 +107,7 @@ export default function Navbar() {
                 href={item.path}
                 className={`
                   relative group transition-all duration-300 whitespace-nowrap
-                  ${isActive ? "text-[#73F68D]" : "text-[#036556]"}
+                  ${isActive ? "text-[#73F68D]" : "text-white"}
                 `}
               >
                 {item.name}
@@ -132,40 +131,43 @@ export default function Navbar() {
           {/* LANGUAGE */}
           <div
             className="
-              hidden sm:flex
-              items-center gap-2
-              font-medium
+    hidden sm:flex
+    items-baseline
+    gap-[6px]
 
-              text-[16px]
+    font-medium
 
-              md:text-[18px]
+    text-[16px]
 
-              xl:text-[22px]
-            "
+    md:text-[18px]
+
+    xl:text-[22px]
+  "
           >
             <Globe
               className="
-                text-[#036556]
+      text-[#FFFFFF]
+      shrink-0
+      relative top-[1px]
 
-                w-[20px] h-[20px]
+      w-[16px] h-[16px]
 
-                md:w-[24px] md:h-[24px]
+      md:w-[18px] md:h-[18px]
 
-                xl:w-[28px] xl:h-[28px]
-              "
+      xl:w-[22px] xl:h-[22px]
+    "
+              strokeWidth={2}
             />
 
             {/* TH */}
             <span
               onClick={() => setLang("TH")}
               className={`
-                cursor-pointer transition-all duration-300
-                ${
-                  lang === "TH"
-                    ? "text-[#73F68D]"
-                    : "text-[#036556] hover:opacity-70"
-                }
-              `}
+      cursor-pointer
+      transition-all duration-300
+
+      ${lang === "TH" ? "text-[#73F68D]" : "text-[#FFFFFF] hover:opacity-70"}
+    `}
             >
               TH
             </span>
@@ -181,7 +183,7 @@ export default function Navbar() {
                 ${
                   lang === "EN"
                     ? "text-[#73F68D]"
-                    : "text-[#036556] hover:opacity-70"
+                    : "text-[#FFFFFF] hover:opacity-70"
                 }
               `}
             >
@@ -195,7 +197,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="
               lg:hidden
-              text-[#036556]
+              text-[#73F68D]
             "
           >
             {mobileMenuOpen ? (
@@ -213,7 +215,7 @@ export default function Navbar() {
           lg:hidden
           overflow-hidden
           transition-all duration-300 ease-in-out
-          bg-white border-t border-[#E8E8E8]
+          bg-[#036556]
 
           ${mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
         `}
@@ -234,7 +236,7 @@ export default function Navbar() {
                   font-medium
                   transition-all duration-300
 
-                  ${isActive ? "text-[#73F68D]" : "text-[#036556]"}
+                  ${isActive ? "text-[#73F68D]" : "text-[#FFFFFF]"}
                 `}
               >
                 {item.name}
@@ -244,13 +246,13 @@ export default function Navbar() {
 
           {/* MOBILE LANGUAGE */}
           <div className="flex items-center gap-2 pt-5">
-            <Globe className="w-5 h-5 text-[#036556]" />
+            <Globe className="w-5 h-5 text-[#FFFFFF]" />
 
             <span
               onClick={() => setLang("TH")}
               className={`
                 cursor-pointer font-medium transition-all duration-300
-                ${lang === "TH" ? "text-[#73F68D]" : "text-[#036556]"}
+                ${lang === "TH" ? "text-[#73F68D]" : "text-[#FFFFFF]"}
               `}
             >
               TH
