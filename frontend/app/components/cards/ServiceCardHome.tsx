@@ -40,8 +40,8 @@ export default function ServiceCardHome({
           relative
           h-full
 
-          bg-white
-          border border-[#E9EFEC]
+          bg-[#6DEDC3]/[0.18]
+          border border-[#6DEDC3]/25
 
           rounded-tl-[28px]
           rounded-br-[28px]
@@ -90,7 +90,8 @@ export default function ServiceCardHome({
 
               rounded-full
 
-              bg-[#73F68D]/10
+              bg-white/60
+              border border-[#73F68D]/30
             "
           >
             <Icon

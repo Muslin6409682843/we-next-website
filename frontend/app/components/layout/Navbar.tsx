@@ -2,12 +2,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
   const pathname = usePathname();
+
+  const isHome = pathname === "/";
 
   const menu = [
     { name: "หน้าแรก", path: "/" },
@@ -19,15 +21,38 @@ export default function Navbar() {
 
   const [lang, setLang] = useState<"TH" | "EN">("TH");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
-      className="
+      className={`
         fixed top-0 left-0 z-50
         w-full
-        bg-white
-        border-b border-[#E8E8E8]
-      "
+
+        transition-all duration-300
+
+        ${
+          isHome
+            ? scrolled
+              ? "bg-[#036556]/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.18)]"
+              : "bg-gradient-to-b from-black/60 via-black/25 to-transparent"
+            : "bg-[#036556]"
+        }
+      `}
     >
       {/* MAIN NAVBAR */}
       <div
@@ -58,7 +83,7 @@ export default function Navbar() {
         <div className="flex items-center z-20">
           <Link href="/">
             <img
-              src="/logo.png"
+              src="/logo-white.png"
               alt="WeNext Logo"
               className="
                 object-contain cursor-pointer
@@ -108,7 +133,7 @@ export default function Navbar() {
                 href={item.path}
                 className={`
                   relative group transition-all duration-300 whitespace-nowrap
-                  ${isActive ? "text-[#73F68D]" : "text-[#036556]"}
+                  ${isActive ? "text-[#73F68D]" : "text-white"}
                 `}
               >
                 {item.name}
@@ -133,7 +158,9 @@ export default function Navbar() {
           <div
             className="
               hidden sm:flex
-              items-center gap-2
+              items-baseline
+              gap-[6px]
+
               font-medium
 
               text-[16px]
@@ -145,49 +172,35 @@ export default function Navbar() {
           >
             <Globe
               className="
-                text-[#036556]
+                text-[#FFFFFF]
+                shrink-0
+                relative top-[1px]
 
-                w-[20px] h-[20px]
+                w-[16px] h-[16px]
 
-                md:w-[24px] md:h-[24px]
+                md:w-[18px] md:h-[18px]
 
-                xl:w-[28px] xl:h-[28px]
+                xl:w-[22px] xl:h-[22px]
               "
+              strokeWidth={2}
             />
 
             {/* TH */}
             <span
               onClick={() => setLang("TH")}
               className={`
-                cursor-pointer transition-all duration-300
+                cursor-pointer
+                transition-all duration-300
+
                 ${
                   lang === "TH"
                     ? "text-[#73F68D]"
-                    : "text-[#036556] hover:opacity-70"
+                    : "text-[#FFFFFF] hover:opacity-70"
                 }
               `}
             >
               TH
             </span>
-
-            {/* ซ่อน EN ชั่วคราว */}
-            {/*
-            <span className="text-[#036556]">/</span>
-
-            <span
-              onClick={() => setLang("EN")}
-              className={`
-                cursor-pointer transition-all duration-300
-                ${
-                  lang === "EN"
-                    ? "text-[#73F68D]"
-                    : "text-[#036556] hover:opacity-70"
-                }
-              `}
-            >
-              EN
-            </span>
-            */}
           </div>
 
           {/* 🔹 MOBILE MENU BUTTON */}
@@ -195,7 +208,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="
               lg:hidden
-              text-[#036556]
+              text-[#73F68D]
             "
           >
             {mobileMenuOpen ? (
@@ -213,7 +226,14 @@ export default function Navbar() {
           lg:hidden
           overflow-hidden
           transition-all duration-300 ease-in-out
-          bg-white border-t border-[#E8E8E8]
+
+          ${
+            isHome
+              ? scrolled
+                ? "bg-[#036556]/95 backdrop-blur-md"
+                : "bg-[#036556]/90 backdrop-blur-md"
+              : "bg-[#036556]"
+          }
 
           ${mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
         `}
@@ -234,7 +254,7 @@ export default function Navbar() {
                   font-medium
                   transition-all duration-300
 
-                  ${isActive ? "text-[#73F68D]" : "text-[#036556]"}
+                  ${isActive ? "text-[#73F68D]" : "text-[#FFFFFF]"}
                 `}
               >
                 {item.name}
@@ -244,13 +264,13 @@ export default function Navbar() {
 
           {/* MOBILE LANGUAGE */}
           <div className="flex items-center gap-2 pt-5">
-            <Globe className="w-5 h-5 text-[#036556]" />
+            <Globe className="w-5 h-5 text-[#FFFFFF]" />
 
             <span
               onClick={() => setLang("TH")}
               className={`
                 cursor-pointer font-medium transition-all duration-300
-                ${lang === "TH" ? "text-[#73F68D]" : "text-[#036556]"}
+                ${lang === "TH" ? "text-[#73F68D]" : "text-[#FFFFFF]"}
               `}
             >
               TH

@@ -3,7 +3,7 @@ import ServiceCardHome from "./components/cards/ServiceCardHome";
 
 export default function Home() {
   return (
-    <main>
+    <>
       {/* HERO */}
       <Hero
         size="large"
@@ -151,6 +151,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+        </>
   );
 }

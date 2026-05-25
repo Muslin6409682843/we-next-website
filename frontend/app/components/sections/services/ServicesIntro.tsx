@@ -35,12 +35,12 @@ export default function ServicesIntro() {
               className="
               text-[#73F68D]
               font-medium
-              tracking-[0.2em]
+              
 
-              text-[12px] sm:text-[14px]
+              text-[24px] sm:text-[30px] lg:text-[38px]
             "
             >
-              เริ่มต้นการเดินทางสู่การลดคาร์บอนร่วมกัน
+              เริ่มต้นการเดินทางสู่การลดคาร์บอน
             </p>
 
             {/* MAIN HEADLINE */}
