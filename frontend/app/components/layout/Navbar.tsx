@@ -2,12 +2,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
   const pathname = usePathname();
+
+  const isHome = pathname === "/";
 
   const menu = [
     { name: "หน้าแรก", path: "/" },
@@ -19,14 +21,38 @@ export default function Navbar() {
 
   const [lang, setLang] = useState<"TH" | "EN">("TH");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
-      className="
+      className={`
         fixed top-0 left-0 z-50
         w-full
-        bg-[#036556]
-      "
+
+        transition-all duration-300
+
+        ${
+          isHome
+            ? scrolled
+              ? "bg-[#036556]/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.18)]"
+              : "bg-gradient-to-b from-black/60 via-black/25 to-transparent"
+            : "bg-[#036556]"
+        }
+      `}
     >
       {/* MAIN NAVBAR */}
       <div
@@ -131,31 +157,31 @@ export default function Navbar() {
           {/* LANGUAGE */}
           <div
             className="
-    hidden sm:flex
-    items-baseline
-    gap-[6px]
+              hidden sm:flex
+              items-baseline
+              gap-[6px]
 
-    font-medium
+              font-medium
 
-    text-[16px]
+              text-[16px]
 
-    md:text-[18px]
+              md:text-[18px]
 
-    xl:text-[22px]
-  "
+              xl:text-[22px]
+            "
           >
             <Globe
               className="
-      text-[#FFFFFF]
-      shrink-0
-      relative top-[1px]
+                text-[#FFFFFF]
+                shrink-0
+                relative top-[1px]
 
-      w-[16px] h-[16px]
+                w-[16px] h-[16px]
 
-      md:w-[18px] md:h-[18px]
+                md:w-[18px] md:h-[18px]
 
-      xl:w-[22px] xl:h-[22px]
-    "
+                xl:w-[22px] xl:h-[22px]
+              "
               strokeWidth={2}
             />
 
@@ -163,33 +189,18 @@ export default function Navbar() {
             <span
               onClick={() => setLang("TH")}
               className={`
-      cursor-pointer
-      transition-all duration-300
+                cursor-pointer
+                transition-all duration-300
 
-      ${lang === "TH" ? "text-[#73F68D]" : "text-[#FFFFFF] hover:opacity-70"}
-    `}
-            >
-              TH
-            </span>
-
-            {/* ซ่อน EN ชั่วคราว */}
-            {/*
-            <span className="text-[#036556]">/</span>
-
-            <span
-              onClick={() => setLang("EN")}
-              className={`
-                cursor-pointer transition-all duration-300
                 ${
-                  lang === "EN"
+                  lang === "TH"
                     ? "text-[#73F68D]"
                     : "text-[#FFFFFF] hover:opacity-70"
                 }
               `}
             >
-              EN
+              TH
             </span>
-            */}
           </div>
 
           {/* 🔹 MOBILE MENU BUTTON */}
@@ -215,7 +226,14 @@ export default function Navbar() {
           lg:hidden
           overflow-hidden
           transition-all duration-300 ease-in-out
-          bg-[#036556]
+
+          ${
+            isHome
+              ? scrolled
+                ? "bg-[#036556]/95 backdrop-blur-md"
+                : "bg-[#036556]/90 backdrop-blur-md"
+              : "bg-[#036556]"
+          }
 
           ${mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
         `}

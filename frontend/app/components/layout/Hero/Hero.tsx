@@ -29,9 +29,15 @@ export default function Hero({
 
   return (
     <section
-      className={`
+  className={`
     relative
     w-full
+
+    -mt-[88px]
+    sm:-mt-[96px]
+    md:-mt-[105px]
+    lg:-mt-[120px]
+    xl:-mt-[138px]
 
     ${
       isLarge
