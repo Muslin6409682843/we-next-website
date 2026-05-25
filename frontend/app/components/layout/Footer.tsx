@@ -1,33 +1,50 @@
 import { Phone } from "lucide-react";
 
-
 export default function Footer() {
   return (
     <footer className="w-full bg-[#036556] text-white overflow-hidden">
       <div
         className="
-          px-[210px] py-[50px]
+          max-w-[1600px]
+          mx-auto
 
-          max-[1400px]:px-[120px]
-          max-[1200px]:px-[80px]
-          max-[992px]:px-[50px]
+          px-[120px]
+          pt-[26px]
+          pb-[34px]
+
+          max-[1440px]:px-[72px]
+          max-[1280px]:px-[56px]
+          max-[1100px]:px-[40px]
           max-[768px]:px-[30px]
           max-[640px]:px-5
 
-          grid grid-cols-[600px_auto]
+          max-[768px]:pt-[22px]
+          max-[768px]:pb-[28px]
+
+          max-[640px]:pt-[18px]
+          max-[640px]:pb-[24px]
+
+          grid grid-cols-[minmax(0,1fr)_420px]
           max-[1100px]:grid-cols-1
 
-          gap-[50px]
+          gap-[80px]
+          max-[1440px]:gap-[56px]
           max-[1100px]:gap-10
+          max-[640px]:gap-8
+
+          items-start
         "
       >
         {/* 🔹 LEFT */}
-        <div className="grid grid-rows-[auto_auto_auto_auto]">
+        <div className="min-w-0">
           <img
             src="/logo-white.png"
             alt="WeNext Logo"
             className="
-              w-[213px] h-[98px] object-contain mb-3
+              w-[213px]
+              h-[98px]
+              object-contain
+              mb-1
 
               max-[768px]:w-[180px]
               max-[768px]:h-auto
@@ -36,7 +53,11 @@ export default function Footer() {
 
           <p
             className="
-              text-[24px] font-semibold mb-4
+              text-[24px]
+              font-semibold
+              mb-2
+
+              max-[1440px]:text-[22px]
 
               max-[768px]:text-[20px]
               max-[640px]:text-[18px]
@@ -47,10 +68,16 @@ export default function Footer() {
 
           <p
             className="
-              text-[24px] leading-[36px]
+              max-w-[760px]
 
-              max-[768px]:text-[20px]
-              max-[768px]:leading-[32px]
+              text-[24px]
+              leading-[36px]
+
+              max-[1440px]:text-[20px]
+              max-[1440px]:leading-[32px]
+
+              max-[768px]:text-[18px]
+              max-[768px]:leading-[30px]
 
               max-[640px]:text-[16px]
               max-[640px]:leading-[28px]
@@ -64,21 +91,22 @@ export default function Footer() {
         {/* 🔹 RIGHT */}
         <div
           className="
-            relative
-            grid grid-rows-[auto_auto_auto_auto]
+            w-full
+            max-w-[420px]
 
-            pt-[110px]
+            pt-[92px]
 
             max-[1100px]:pt-0
           "
         >
-          {/* spacer */}
-          <div className="max-[1100px]:hidden"></div>
-
           {/* title */}
           <p
             className="
-              text-[24px] font-semibold mb-4
+              text-[24px]
+              font-semibold
+              mb-2
+
+              max-[1440px]:text-[22px]
 
               max-[768px]:text-[20px]
               max-[640px]:text-[18px]
@@ -91,10 +119,17 @@ export default function Footer() {
           <div
             className="
               flex items-start gap-3
-              text-[24px] leading-[36px]
 
-              max-[768px]:text-[20px]
-              max-[768px]:leading-[32px]
+              text-[24px]
+              leading-[36px]
+
+              mb-3
+
+              max-[1440px]:text-[20px]
+              max-[1440px]:leading-[32px]
+
+              max-[768px]:text-[18px]
+              max-[768px]:leading-[30px]
 
               max-[640px]:text-[16px]
               max-[640px]:leading-[28px]
@@ -102,8 +137,15 @@ export default function Footer() {
           >
             <Phone
               className="
-                w-[24px] h-[24px]
-                fill-white stroke-none mt-[2px]
+                w-[24px]
+                h-[24px]
+                fill-white
+                stroke-none
+                mt-[3px]
+                shrink-0
+
+                max-[1440px]:w-[22px]
+                max-[1440px]:h-[22px]
 
                 max-[640px]:w-5
                 max-[640px]:h-5
@@ -117,10 +159,15 @@ export default function Footer() {
           <div
             className="
               flex items-start gap-3
-              text-[24px] leading-[36px]
 
-              max-[768px]:text-[20px]
-              max-[768px]:leading-[32px]
+              text-[24px]
+              leading-[36px]
+
+              max-[1440px]:text-[20px]
+              max-[1440px]:leading-[32px]
+
+              max-[768px]:text-[18px]
+              max-[768px]:leading-[30px]
 
               max-[640px]:text-[16px]
               max-[640px]:leading-[28px]
@@ -128,7 +175,13 @@ export default function Footer() {
           >
             <svg
               className="
-                w-[24px] h-[24px] mt-[4px]
+                w-[24px]
+                h-[24px]
+                mt-[4px]
+                shrink-0
+
+                max-[1440px]:w-[22px]
+                max-[1440px]:h-[22px]
 
                 max-[640px]:w-5
                 max-[640px]:h-5
@@ -162,25 +215,12 @@ export default function Footer() {
           {/* 🔥 SOCIAL */}
           <div
             className="
-              absolute
-              right-0
-              bottom-0
+              flex flex-wrap items-center gap-4
 
-              flex gap-5
+              mt-6
 
-              /* 🔥 Nest Hub fix */
-              max-[1024px]:relative
-              max-[1024px]:right-auto
-              max-[1024px]:bottom-auto
-              max-[1024px]:mt-8
-
-              /* 🔥 จอเตี้ยแบบ Nest Hub */
-              max-h-[700px]:relative
-              max-h-[700px]:right-auto
-              max-h-[700px]:bottom-auto
-              max-h-[700px]:mt-8
-
-              max-[640px]:gap-4
+              max-[640px]:gap-3
+              max-[640px]:mt-5
             "
           >
             <a
@@ -192,8 +232,15 @@ export default function Footer() {
                 src="/icons/facebook2.png"
                 alt="facebook"
                 className="
-                  w-[38px] h-[38px]
-                  cursor-pointer hover:opacity-70 transition
+                  w-[36px]
+                  h-[36px]
+
+                  cursor-pointer
+                  hover:opacity-70
+                  transition
+
+                  max-[1440px]:w-[32px]
+                  max-[1440px]:h-[32px]
 
                   max-[640px]:w-8
                   max-[640px]:h-8
@@ -210,8 +257,15 @@ export default function Footer() {
                 src="/icons/linkedin2.png"
                 alt="linkedin"
                 className="
-                  w-[38px] h-[38px]
-                  cursor-pointer hover:opacity-70 transition
+                  w-[36px]
+                  h-[36px]
+
+                  cursor-pointer
+                  hover:opacity-70
+                  transition
+
+                  max-[1440px]:w-[32px]
+                  max-[1440px]:h-[32px]
 
                   max-[640px]:w-8
                   max-[640px]:h-8
@@ -228,8 +282,15 @@ export default function Footer() {
                 src="/icons/line.png"
                 alt="line"
                 className="
-                  w-[38px] h-[38px]
-                  cursor-pointer hover:opacity-70 transition
+                  w-[36px]
+                  h-[36px]
+
+                  cursor-pointer
+                  hover:opacity-70
+                  transition
+
+                  max-[1440px]:w-[32px]
+                  max-[1440px]:h-[32px]
 
                   max-[640px]:w-8
                   max-[640px]:h-8
