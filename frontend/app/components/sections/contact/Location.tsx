@@ -125,24 +125,7 @@ lg:pb-28
           items-start
         "
         >
-          {/* LABEL */}
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-[1px] bg-[#73F68D]" />
 
-            <span
-              className="
-              text-[#73F68D]
-
-              uppercase
-              tracking-[0.25em]
-
-              text-[11px]
-              sm:text-[12px]
-            "
-            >
-              Location
-            </span>
-          </div>
 
           {/* TITLE */}
           <h2

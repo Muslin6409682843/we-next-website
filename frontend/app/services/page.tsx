@@ -20,8 +20,6 @@ export default function ServicesPage() {
       <CarbonReductionExamples />
       <OurServices />
       <CallToAction />
-     
-
     </>
   );
 }

@@ -6,12 +6,13 @@ export default function Home() {
     <>
       {/* HERO */}
       <Hero
-        size="large"
-        variant="right-button"
-        type="video"
-        src="/videos/heroTrim.mp4"
-        title={`ให้คำปรึกษาการลดการปล่อยก๊าซเรือนกระจกสำหรับ SME`}
-      />
+  size="large"
+  variant="right-button"
+  type="video"
+  src="/videos/heroTrim.mp4"
+  overlayNavbar
+  title={`ให้คำปรึกษาการลดการปล่อยก๊าซเรือนกระจกสำหรับ SME`}
+/>
 
       {/* 🔽 SECTION: SERVICES */}
       <section

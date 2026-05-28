@@ -4,7 +4,6 @@ import ServiceIntro from "../../components/sections/services/details/ServiceIntr
 import SectionDivider from "../../components/ui/SectionDivider";
 import TextSection from "../../components/sections/services/details/TextSection";
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
-import ConsultationSectionTraining from "../../components/sections/services/details/ConsultationSectionTraining";
 import FAQSection from "../../components/sections/services/details/FAQSection";
 import CTASection from "../../components/sections/services/details/CTASection";
 import PricingSection from "../../components/sections/services/details/PricingSection";

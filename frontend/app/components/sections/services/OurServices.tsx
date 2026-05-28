@@ -13,7 +13,6 @@ export default function OurServices() {
     >
       {/* HEADER */}
       <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-        <p className="text-[#73F68D] tracking-[0.35em] text-sm">OUR SERVICES</p>
 
         <h2
           className="

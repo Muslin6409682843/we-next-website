@@ -10,6 +10,8 @@ type Props = {
 
   type?: "image" | "video";
   src: string;
+
+  overlayNavbar?: boolean;
 };
 
 export default function Hero({
@@ -21,6 +23,8 @@ export default function Hero({
 
   type = "image",
   src,
+
+  overlayNavbar = false,
 }: Props) {
   const isLarge = size === "large";
 
@@ -33,12 +37,17 @@ export default function Hero({
     relative
     w-full
 
-    -mt-[88px]
-    sm:-mt-[96px]
-    md:-mt-[105px]
-    lg:-mt-[120px]
-    xl:-mt-[138px]
-
+    ${
+      overlayNavbar
+        ? `
+          -mt-[88px]
+          sm:-mt-[96px]
+          md:-mt-[105px]
+          lg:-mt-[120px]
+          xl:-mt-[138px]
+        `
+        : ""
+    }
     ${
       isLarge
         ? largeConfig.height

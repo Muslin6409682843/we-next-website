@@ -2,7 +2,6 @@ import Hero from "../../components/layout/Hero/Hero";
 import BackToServices from "../../components/sections/services/details/BackToServices";
 import ServiceIntro from "../../components/sections/services/details/ServiceIntro";
 import SectionDivider from "../../components/ui/SectionDivider";
-import SideAccentSection from "../../components/layout/SideAccentSection";
 import TextSection from "../../components/sections/services/details/TextSection";
 import WorkflowSection from "../../components/sections/services/details/WorkflowSection";
 import ConsultationSectionCFO from "../../components/sections/services/details/ConsultationSectionCFO";

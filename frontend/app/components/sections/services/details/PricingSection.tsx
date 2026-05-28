@@ -53,35 +53,6 @@ export default function PricingSection({
           lg:mb-16
         "
         >
-          {/* LABEL */}
-          <div
-            className="
-            inline-flex
-            items-center
-            gap-3
-
-            mb-5
-            sm:mb-6
-          "
-          >
-            <div className="w-8 sm:w-10 h-[1px] bg-[#73F68D]" />
-
-            <span
-              className="
-              text-[#73F68D]
-
-              uppercase
-              tracking-[0.24em]
-
-              text-[10px]
-              sm:text-[12px]
-            "
-            >
-              Pricing
-            </span>
-
-            <div className="w-8 sm:w-10 h-[1px] bg-[#73F68D]" />
-          </div>
 
           {/* TITLE */}
           <h2

@@ -157,24 +157,7 @@ export default function ServiceIntro({
   max-xl:mx-auto
 "
         >
-          {/* LABEL */}
-          <div className="flex items-center gap-3 mb-5 sm:mb-6">
-            <div className="w-8 sm:w-10 h-[1px] bg-[#73F68D]" />
 
-            <span
-              className="
-              text-[#73F68D]
-
-              uppercase
-              tracking-[0.24em]
-
-              text-[10px]
-              sm:text-[11px]
-            "
-            >
-              Service Overview
-            </span>
-          </div>
 
           {/* TITLE MOBILE/TABLET */}
           <h1
@@ -219,21 +202,6 @@ export default function ServiceIntro({
           >
             {description}
           </p>
-
-          {/* BOTTOM LINE */}
-          <div
-            className="
-            mt-8
-            sm:mt-10
-
-            w-16
-            sm:w-24
-
-            h-[2px]
-
-            bg-[#73F68D]/50
-          "
-          />
         </div>
       </div>
     </section>

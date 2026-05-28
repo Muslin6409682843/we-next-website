@@ -59,43 +59,7 @@ export default function ConsultationSectionCFO() {
           lg:py-14
         "
         >
-          {/* TOP LABEL */}
-          <div
-            className="
-            inline-flex
-            items-center
-            gap-2
 
-            rounded-full
-
-            border border-[#73F68D]/20
-            bg-white
-
-            px-4
-            py-2
-
-            mb-6
-            sm:mb-7
-          "
-          >
-            <Sparkles className="w-4 h-4 text-[#73F68D]" />
-
-            <span
-              className="
-              text-[#036556]
-
-              font-semibold
-
-              tracking-[0.12em]
-
-              uppercase
-
-              text-[11px]
-            "
-            >
-              Free Consultation
-            </span>
-          </div>
 
           {/* MAIN CONTENT */}
           <div
@@ -292,20 +256,6 @@ export default function ConsultationSectionCFO() {
                 py-4
               "
               >
-                <p
-                  className="
-                  text-[#73F68D]
-
-                  uppercase
-                  tracking-[0.18em]
-
-                  text-[10px]
-
-                  mb-2
-                "
-                >
-                  Consultation
-                </p>
 
                 <p
                   className="

@@ -14,12 +14,6 @@ export default function CTASection() {
           {/* LEFT PANEL */}
           <div className="flex flex-col justify-center">
 
-            {/* badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#036556]/10 px-4 py-2 text-[#036556] text-sm font-medium w-fit">
-              <MessageCircle size={16} />
-              Contact Us
-            </div>
-
             {/* title */}
             <h2 className="mt-6 text-[30px] sm:text-[38px] lg:text-[46px] font-bold leading-tight text-[#036556]">
               ติดต่อเรา <br />
@@ -44,7 +38,7 @@ export default function CTASection() {
                 <div className="flex-1">
                   <p className="text-xs text-gray-400">Phone</p>
                   <p className="text-[#036556] font-semibold text-lg">
-                    065-419-9000
+                    065-419-9000, 065-415-5000
                   </p>
                 </div>
               </div>
