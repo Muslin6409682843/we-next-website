@@ -28,21 +28,6 @@ export default function CallToAction() {
       >
         {/* LABEL */}
         <div className="flex items-center gap-3 mb-5 md:mb-6">
-          <div className="w-8 md:w-12 h-[1px] bg-[#73F68D]" />
-
-          <span
-            className="
-            text-[#73F68D]
-
-            text-[10px]
-            md:text-[12px]
-
-            tracking-[0.28em]
-            uppercase
-          "
-          >
-            Contact Us
-          </span>
         </div>
 
         {/* TITLE */}

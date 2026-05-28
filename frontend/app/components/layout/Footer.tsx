@@ -152,7 +152,7 @@ export default function Footer() {
               "
             />
 
-            <span>065-419-9000</span>
+            <span>065-419-9000, 065-415-5000</span>
           </div>
 
           {/* time */}
